@@ -22,13 +22,13 @@
 
   <mat-list role="list">
 
-    <mat-list-item role="listitem" *ngFor="let shoe of typesOfShoes">
+    <mat-list-item role="listitem" *ngFor="let group of groups">
       <button mat-button>
-        <a routerLink='/message/{{shoe.id}}'>
-          <img src="{{shoe.face}}"> 
+        <a routerLink='/message/{{group.id}}'>
+          <img src="{{group.imagepath}}"> 
           <div class='user-chat'>
             <span>
-               {{shoe.name}}
+               {{group.name}}
             </span>
             <em>
               haha:666
