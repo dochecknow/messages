@@ -7,20 +7,8 @@
   z-index: 1000;
   background: white;
 }
-#chats-list{
-  margin-top: 121px;
-}
-.user-chat *{
-  display: block;
-}
-.user-chat span{
-line-height: 28px;
-}
-.user-chat em{
-line-height: 20px;
-font-size: 14PX;
-color: rgba(0,0,0,.5)
-}
+
+
 
 .step1{
     display:flex;
@@ -42,32 +30,19 @@ color: rgba(0,0,0,.5)
 .step1-list div{
     margin-left:8px
 }
+#chats-list{
+  margin-top: 121px;
+}
 
-#chats-list .mat-list-item{
-  margin-bottom: 5px;
-  border-bottom: 1px solid rgba(0,0,0,.08);
-}
-#chats-list button > .mat-button-wrapper{
+
+.user-chat *{
   display: block;
-  height: 40px;
 }
-#chats-list button a{
-  display: block
+.user-chat span{
+line-height: 28px;
 }
-#chats-list button img{
-  width: 40px; 
-  height: 40px;
-  margin-right: 8px;
-  border-radius: 5px;
-  display: block;
-  float:left;
-  margin-top: 4px;
-  
-}
-#chats-list button{
-  line-height: 48px;
-  width: 100%;
-  text-align: left;
-  font-weight: 400;
-  font-size: 16px;
+.user-chat em{
+line-height: 20px;
+font-size: 14PX;
+color: rgba(0,0,0,.5)
 }

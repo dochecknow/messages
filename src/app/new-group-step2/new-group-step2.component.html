@@ -1,14 +1,26 @@
-<mat-accordion >
+<div class="step">
+  <div class="step2">
+    <button mat-raised-button>
+      <a routerLink="/messages">BACK
+      </a>
+    </button>
+    <button mat-raised-button color="primary">
+      <a routerLink="/newGroupStep2" class='color'>
+        CREATE
+      </a>
+    </button>
+  </div>
+<mat-accordion class='add-name'>
   <mat-expansion-panel hideToggle="true">
     <mat-expansion-panel-header>
-      <mat-panel-title>
-        <mat-icon>
+      <mat-panel-title >
+        <mat-icon class="add-icon">
           <svg class="icon" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <path fill="white" d="M880.15737 447.719128H575.934072V143.49583c0-35.915501-29.109546-65.025048-65.025048-65.025048s-65.025048 29.109546-65.025047 65.025048v304.223298H141.660679a65.025048 65.025048 0 0 0 0 130.050095h304.223298v304.223298c0 35.915501 29.109546 65.025048 65.025047 65.025048s65.025048-29.109546 65.025048-65.025048V577.769223h304.216073a65.025048 65.025048 0 0 0 65.025047-65.025047 65.010598 65.010598 0 0 0-65.017822-65.025048z"
           />
         </svg>
       </mat-icon>
-        Personal data
+        NAME CVARE
       </mat-panel-title>
       <!-- <mat-panel-description>
         Type your name and age
@@ -26,6 +38,21 @@
 
 
 </mat-accordion>
-<div>
-  aaa
+<div id='chats-list'>
+
+  <mat-list role="list">
+
+    <mat-list-item role="listitem" *ngFor="let shoe of typesOfShoes">
+      <button mat-button>
+       
+          <img src="{{shoe.face}}"> 
+          <div class='user-chat'>
+            <span>
+               {{shoe.name}}
+            </span>
+          </div>
+        
+      </button>
+    </mat-list-item>
+  </mat-list>
 </div>

@@ -15,6 +15,11 @@
     box-shadow:none;
     background: #f5f5f5
 }
+.message button a
+{
+    display: block;
+    width: 100%;
+}
 .message-bottom{
     display:flex;
     
