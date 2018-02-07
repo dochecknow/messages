@@ -2,6 +2,7 @@ export class Group {
     public id: string;
     public name: string;
     public imagepath: string;
+    public LatestMessage: string;
     public members: Array<string>;
     constructor(id: string, imagepath: string, name: string, members: Array<string>) {
         this.id = id;

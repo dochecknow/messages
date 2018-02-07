@@ -5,30 +5,30 @@
       </a>
     </button>
     <span>
-        Group1, Me
+      {{group.name}}
     </span>
   </mat-toolbar>
 </div>
 
 <div class='message-main'>
   <div class='left chat-list'>
-    <div>
-      <img src='https://i.stack.imgur.com/isckt.jpg?s=32&g=1'>
+    <div *ngFor="let msg of otherMessages">
+      <img src='{{ msg.imageSender}}'>
       <div>
-        <i>lisa</i>
+        <i>{{ msg.nameSender}}</i>
         <p>
-          hello!!!!
+          {{ msg.message}}
         </p>
       </div>
     </div>
   </div>
   <div class='right chat-list'>
-    <div>
-      <img src='https://i.stack.imgur.com/isckt.jpg?s=32&g=1'>
+    <div *ngFor="let msg of mineMessage">
+      <img src='{{ msg.imageSender}}'>
       <div>
-        <i>lisa</i>
+        <i>{{ msg.nameSender}}</i>
         <p>
-          hello!!!!
+          {{ msg.message}}
         </p>
       </div>
     </div>
@@ -37,7 +37,7 @@
 
 <div class="message-bottom">
   <mat-form-field class="input">
-    <input matInput placeholder="SEND MESSAGE">
+    <input [(ngModel)]="sentMessage.message" (keyup)="onKey($event)" matInput placeholder="SEND MESSAGE">
   </mat-form-field>
   <button (click)="addMessage()" mat-raised-button color="primary">
     <svg class="icon" width="20px" height="20.00px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">

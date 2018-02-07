@@ -1,7 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Messages } from '../models/messages.model';
 
-export let MessagesDumy: Messages[] = [];
+export let MessagesDumy: Messages[] = [
+
+    {
+        idSender: '1',
+        idGroup: 'Mr. Nice1',
+        message: 'Please talk to me some words',
+        timestamp: 1,
+        imageSender: 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',
+        imageGroup: '',
+        nameSender: 'Sharon',
+        nameGroup: ''
+    },
+    {
+        idSender: 'MineID',
+        idGroup: 'Mr. Nice1',
+        message: 'I love you',
+        timestamp: 1,
+        imageSender: 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',
+        imageGroup: '',
+        nameSender: 'Me',
+        nameGroup: ''
+    }
+];
 
 @Injectable()
 export class MessageService {
@@ -10,10 +32,10 @@ export class MessageService {
         return Promise.resolve(MessagesDumy);
     }
     getMessagesByGroup(groupID: string): Promise<Messages[]> {
-        let messageGroup = MessagesDumy.filter(r => r.idGroup === groupID);
+        const messageGroup = MessagesDumy.filter(r => r.idGroup === groupID);
         return Promise.resolve(messageGroup);
     }
-    sentMessage(msg: string): void {
-        MessagesDumy.push(new Messages('sender', 'group', msg, 1, 'image', 'imageGroup', 'nameSender', 'nameGroup'));
+    sentMessage(msg: Messages): void {
+        MessagesDumy.push(msg);
     }
 }
