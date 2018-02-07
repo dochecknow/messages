@@ -1,19 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { User } from '../models/user.model';
-
+import { Component } from '@angular/core';
+import { DialogOverviewExampleDialog } from './user.model'
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 @Component({
   selector: 'app-new-group-step2',
   templateUrl: './new-group-step2.component.html',
   styleUrls: ['./new-group-step2.component.css']
 })
-export class NewGroupStep2Component implements OnInit {
-  _user: User;
-  _users: Array<User>;
-  constructor() { }
+export class NewGroupStep2Component {
+  constructor(public dialog: MatDialog) { }
 
-  ngOnInit() {
-    this._user = new User('aaaa', 'https://jnswwns.com', 'test@gmail.com', 'Michael');
-    this._users = [this._user, this._user];
+  openDialog(): void {
+    let dialogRef = this.dialog.open(DialogOverviewExampleDialog,{
+      width:'250px',
+      height:'60px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
-
 }

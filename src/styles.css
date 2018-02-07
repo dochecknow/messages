@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.Add-chat button{
+    float:right;
+    
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+.serch-width{
+  width:100%;
+}
+#chats-list .mat-list-item-content {
+  padding: 0 ;
+}
+.step1 .mat-selection-list .mat-list-item{
+  margin-bottom: 5px!important;
+}
+.mat-list .mat-list-item .mat-list-text, .mat-list .mat-list-option .mat-list-text, .mat-nav-list .mat-list-item .mat-list-text, .mat-nav-list .mat-list-option .mat-list-text, .mat-selection-list .mat-list-item .mat-list-text, .mat-selection-list .mat-list-option .mat-list-text{
+  padding:0!important;
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+a.color{
+  color:white;
+}

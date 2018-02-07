@@ -1,3 +1,31 @@
-<p>
-  new-group-step1 works!
-</p>
+<div class="step">
+  <div class="step1">
+    <button mat-raised-button>
+      <a routerLink="/messages">CANCEL
+      </a>
+    </button>
+    <button mat-raised-button color="primary">
+      <a routerLink="/newGroupStep2" class='color'>
+        NEXT
+      </a>
+    </button>
+  </div>
+  <div class="example-container">
+    <mat-form-field class="serch-width">
+      <input matInput placeholder="SEARCH" (keyup)="serchChange($event)">
+    </mat-form-field>
+  </div>
+
+  <mat-selection-list #shoes>
+    <div *ngFor="let shoe of typesOflist" class='step1-list-show'>
+      <mat-list-option>
+        <div class='step1-list'>
+          <img src="{{shoe.face}}">
+          <div>{{shoe.name}}</div>
+        </div>
+      </mat-list-option>
+    </div>
+
+
+  </mat-selection-list>
+</div>
