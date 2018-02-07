@@ -32,3 +32,39 @@ a{
 a.color{
   color:white;
 }
+.add-name .mat-expansion-panel-body{
+    /* border-bottom: 1px solid rgba(0,0,0,.08); */
+    padding:4px 16px !important;
+
+}
+
+
+#chats-list .mat-list-item{
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+#chats-list button > .mat-button-wrapper{
+  display: block;
+  height: 40px;
+}
+#chats-list button a{
+  display: block
+}
+#chats-list button img{
+  width: 40px; 
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 5px;
+  display: block;
+  float:left;
+  margin-top: 4px;
+  margin-bottom:4px;
+  
+}
+#chats-list button{
+  line-height: 48px;
+  width: 100%;
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+}
