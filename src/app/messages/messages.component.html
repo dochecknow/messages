@@ -25,11 +25,16 @@
         <a routerLink='/message/{{group.id}}'>
           <img src="{{group.imagepath}}">
           <div class='user-chat'>
-            <span>
-              {{group.name}}
+            <span class='group-top'>
+              <span>
+                {{group.name}}
+              </span>
+              <em class="time">
+                {{group.LatestMessageDate}}
+              </em>
             </span>
             <em>
-              {{group.LatestMessage}}
+              {{group.LatestMessageUser}}: {{group.LatestMessage}}
             </em>
           </div>
         </a>

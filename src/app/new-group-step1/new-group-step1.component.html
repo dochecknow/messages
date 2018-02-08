@@ -18,7 +18,7 @@
 
   <mat-selection-list>
     <div *ngFor="let user of users" class='step1-list-show'>
-      <mat-list-option>
+      <mat-list-option value="{{user.id}}">
         <div class='step1-list'>
           <img src="{{user.imagepath}}">
           <div>{{user.username}}</div>
@@ -26,5 +26,5 @@
       </mat-list-option>
     </div>
   </mat-selection-list>
-  
+
 </div>

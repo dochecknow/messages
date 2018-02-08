@@ -19,6 +19,7 @@ export class NewGroupStep1Component implements OnInit {
   _users: User[];
   users: User[];
 
+  selectUserIDs: string[];
 
   getUsers(): void {
     this.userService.getUsers().then(u => this.users = this._users = u);
@@ -30,8 +31,7 @@ export class NewGroupStep1Component implements OnInit {
   serchChange(event) {
 
     for (const item of this.userSelectionList.selectedOptions.selected) {
-      let v = item.value;
-      console.info(v);
+      this.selectUserIDs.push(item.value);
     }
     const searchValue = (<HTMLInputElement>event.target).value;
     if (searchValue.length !== 0) {
