@@ -13,7 +13,7 @@ import { Group } from '../models/group.model';
 })
 export class MessageComponent implements OnInit {
   myUserID = 'MineID';
-  group: Group;
+  group: Group = Group.createNew();
   sentMessage: Messages = new Messages('', '', '', 1, '', '', '', ''); // Dummy data
   constructor(private messageService: MessageService,
     private groupService: GroupService,

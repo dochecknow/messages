@@ -10,4 +10,7 @@ export class Group {
         this.imagepath = imagepath;
         this.members = members;
     }
+    static createNew(): Group {
+        return  new Group('', '', '', null);
+    }
 }
