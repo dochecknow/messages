@@ -32,7 +32,7 @@
     </mat-form-field>
 
     <mat-action-row>
-      <button mat-button color="primary" (click)="nextStep()">Next</button>
+      <button mat-button color="primary">Next</button>
     </mat-action-row>
   </mat-expansion-panel>
 
@@ -43,7 +43,7 @@
   <mat-list role="list">
 
     <mat-list-item role="listitem" *ngFor="let shoe of typesOfShoes">
-      <button mat-button>
+      <button mat-button (click)="openDialog()" >
        
           <img src="{{shoe.face}}"> 
           <div class='user-chat'>
