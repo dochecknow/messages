@@ -36,3 +36,18 @@
 #chats-list{
     margin-top:8px;
 }
+
+
+.add-group{
+    display: flex;
+    align-items: center;
+}
+.add-input{
+    flex-grow:1
+}
+
+.step2-dialog > div button{
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.42);
+    margin-bottom:5px;
+}

@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// import { IonicApp, IonicModule } from 'ionic-angular';
+
 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageComponent } from './message/message.component';
 import { NewGroupStep1Component } from './new-group-step1/new-group-step1.component';
-import { NewGroupStep2Component } from './new-group-step2/new-group-step2.component';
-import { DialogComponent } from './dialog/dialog.component';
+import { NewGroupStep2Component, DialogOverviewExampleDialog } from './new-group-step2/new-group-step2.component';
+
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // tslint:disable-next-line:max-line-length
@@ -37,7 +37,7 @@ const appRoutes: Routes = [
     MessageComponent,
     NewGroupStep1Component,
     NewGroupStep2Component,
-    DialogComponent
+    DialogOverviewExampleDialog,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +58,8 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
+  entryComponents: [NewGroupStep2Component, DialogOverviewExampleDialog],
+  bootstrap: [AppComponent],
   providers: [GroupService, MessageService],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }
