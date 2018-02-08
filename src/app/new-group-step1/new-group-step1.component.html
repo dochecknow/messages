@@ -16,16 +16,15 @@
     </mat-form-field>
   </div>
 
-  <mat-selection-list #shoes>
-    <div *ngFor="let shoe of typesOflist" class='step1-list-show'>
+  <mat-selection-list>
+    <div *ngFor="let user of users" class='step1-list-show'>
       <mat-list-option>
         <div class='step1-list'>
-          <img src="{{shoe.face}}">
-          <div>{{shoe.name}}</div>
+          <img src="{{user.imagepath}}">
+          <div>{{user.username}}</div>
         </div>
       </mat-list-option>
     </div>
-
-
   </mat-selection-list>
+  
 </div>

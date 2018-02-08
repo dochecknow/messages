@@ -1,70 +1,43 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../models/user.model';
+import { UserService } from '../services/user.service';
+import { MatSelectionList } from '@angular/material';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-new-group-step1',
   templateUrl: './new-group-step1.component.html',
   styleUrls: ['./new-group-step1.component.css']
 })
+
+
 export class NewGroupStep1Component implements OnInit {
-_user: User;
-_users: Array<User>;
-_value=''
-typesOfShoes = [
-    {name:'Boots',face:'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',id:'1'}, 
-    {name:'Clogs',face:'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',id:'2'}, 
-    {name:'Loafers',face:'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',id:'3'}, 
-    {name:'Moccasins',face:'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',id:'4'}, 
-    {name:'Sneakers',face:'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',id:'5'}, 
-  ];
-  typesOflist=this.typesOfShoes
-  constructor() { }
+  @ViewChild(MatSelectionList)
+  private userSelectionList: MatSelectionList;
+
+  constructor(private userService: UserService) { }
+  _users: User[];
+  users: User[];
+
+
+  getUsers(): void {
+    this.userService.getUsers().then(u => this.users = this._users = u);
+  }
 
   ngOnInit() {
-
+    this.getUsers();
   }
-  serchChange(event){
-    let value = (<HTMLInputElement>event.target).value
-    this._value = value
-    console.log(value)
-    // this.typesOfShoes=[]
-     this.typesOflist=this.typesOfShoes.filter(
-      (item)=>{
-        if(value.length!==0)
-        {
-          if(item.name.indexOf(value) !== -1){
-            return item
-            }
-        }else{
-            return item
-        }
-        
-      }
-    )
-    
-    
-  }
-  // ngOnChanges(){
-  //   console.log('ngOnChanges')
-  // }
-  // ngDoCheck(){
-  //   console.log('ngDoCheck')
-  // }
-  // ngAfterContentInit(){
-  //   console.log('ngAfterContentInit')
-  // }
-  // ngAfterContentChecked(){
-  //   console.log('ngAfterContentChecked')
-  // }
-  // ngAfterViewInit(){
-  //   console.log('ngAfterViewInit')
-  // }
-  // ngAfterViewChecked(){
-  //   console.log('ngAfterViewChecked')
-  // }
-  // ngOnDestroy(){
-  //   console.log('ngOnDestroy')
-  // }
-  
+  serchChange(event) {
 
+    for (const item of this.userSelectionList.selectedOptions.selected) {
+      let v = item.value;
+      console.info(v);
+    }
+    const searchValue = (<HTMLInputElement>event.target).value;
+    if (searchValue.length !== 0) {
+      this.users = this._users.filter(u => u.username.toLowerCase().indexOf(searchValue.toLowerCase()) > -1);
+    } else {
+      this.users = this._users;
+    }
+  }
 }

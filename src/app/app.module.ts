@@ -15,6 +15,7 @@ import { MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule
 import { GroupService } from './services/group.service';
 import { MessageService } from './services/messages.service';
 import { FormsModule } from '@angular/forms';
+import { UserService } from './services/user.service';
 
 
 const appRoutes: Routes = [
@@ -58,7 +59,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [GroupService, MessageService],
+  providers: [GroupService, MessageService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

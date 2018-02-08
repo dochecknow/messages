@@ -12,23 +12,21 @@
   </div>
   <div class="example-container">
     <mat-form-field class="serch-width">
-      <input matInput placeholder="SEARCH">
+      <input matInput placeholder="SEARCH" (keyup)="serchChange($event)">
     </mat-form-field>
   </div>
 </div>
 
 
 <div id='chats-list'>
-
   <mat-list role="list">
-
     <mat-list-item role="listitem" *ngFor="let group of groups">
       <button mat-button>
         <a routerLink='/message/{{group.id}}'>
-          <img src="{{group.imagepath}}"> 
+          <img src="{{group.imagepath}}">
           <div class='user-chat'>
             <span>
-               {{group.name}}
+              {{group.name}}
             </span>
             <em>
               {{group.LatestMessage}}
