@@ -9,12 +9,14 @@ import { NewGroupStep1Component } from './new-group-step1/new-group-step1.compon
 import { NewGroupStep2Component } from './new-group-step2/new-group-step2.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { RouterModule, Routes } from '@angular/router';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+// tslint:disable-next-line:max-line-length
 import { MatButtonModule, MatCheckboxModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatCardModule, MatListModule, MatToolbarModule, MatExpansionModule, MatIconModule } from '@angular/material';
+import { GroupService } from './services/group.service';
+import { MessageService } from './services/messages.service';
+import { FormsModule } from '@angular/forms';
 
-import "@angular/material/prebuilt-themes/indigo-pink.css";
+
 const appRoutes: Routes = [
   { path: 'messages', component: MessagesComponent },
   { path: 'message/:id', component: MessageComponent },
@@ -50,12 +52,13 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatExpansionModule,
     MatIconModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [GroupService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
