@@ -36,7 +36,9 @@ export class DialogOverviewExampleDialog {
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { }
+    @Inject(MAT_DIALOG_DATA) 
+    public data: any
+  ) { }
 
   onNoClick(): void {
     this.dialogRef.close();
