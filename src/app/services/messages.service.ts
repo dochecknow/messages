@@ -5,7 +5,7 @@ export let MessagesDumy: Messages[] = [
 
     {
         idSender: '1',
-        idGroup: 'Mr. Nice1',
+        idGroup: '1',
         message: 'Please talk to me some words',
         timestamp: 1,
         imageSender: 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',
@@ -15,7 +15,7 @@ export let MessagesDumy: Messages[] = [
     },
     {
         idSender: 'MineID',
-        idGroup: 'Mr. Nice1',
+        idGroup: '1',
         message: 'I love you',
         timestamp: 1,
         imageSender: 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',

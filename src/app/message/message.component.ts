@@ -21,16 +21,18 @@ export class MessageComponent implements OnInit {
   otherMessages: Messages[];
   mineMessage: Messages[];
   getMessages(): void {
-    this.messageService.getMessages().then(m => {
+    this.messageService.getMessagesByGroup(this.group.id).then(m => {
       this.otherMessages = m.filter(r => r.idSender !== this.myUserID);
       this.mineMessage = m.filter(r => r.idSender === this.myUserID);
     });
   }
   ngOnInit() {
-    this.getMessages();
     this.route.paramMap
       .switchMap((params: ParamMap) => this.groupService.getGroup(params.get('id')))
-      .subscribe(g => this.group = g);
+      .subscribe(g => {
+        this.group = g;
+        this.getMessages();
+      });
   }
   onKey(event: KeyboardEvent) {
     if (event.code === 'Enter') {
@@ -38,15 +40,22 @@ export class MessageComponent implements OnInit {
     }
   }
   addMessage(): void {
+    if (this.sentMessage.message === '') {
+      return;
+    }
     const toSentMessage = new Messages(
       this.myUserID,
-      '', this.sentMessage.message,
+      this.group.id,
+      this.sentMessage.message,
       1, 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1',
       '',
       'Me',
       '');
 
     this.messageService.sentMessage(toSentMessage);
+    this.group.LatestMessageUser = 'Me';
+    this.group.LatestMessage = this.sentMessage.message;
+    this.group.LatestMessageDate = new Date().toLocaleDateString();
     this.getMessages();
     this.sentMessage.message = '';
   }

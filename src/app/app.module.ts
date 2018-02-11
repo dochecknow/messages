@@ -23,7 +23,8 @@ const appRoutes: Routes = [
   { path: 'messages', component: MessagesComponent },
   { path: 'message/:id', component: MessageComponent },
   { path: 'newGroupStep1', component: NewGroupStep1Component },
-  { path: 'newGroupStep2', component: NewGroupStep2Component },
+  { path: 'newGroupStep1/:id', component: NewGroupStep1Component },
+  { path: 'newGroupStep2/:id', component: NewGroupStep2Component },
   { path: 'group', component: GroupComponent },
 
   {

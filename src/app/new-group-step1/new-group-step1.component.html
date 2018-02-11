@@ -4,10 +4,8 @@
       <a routerLink="/messages">CANCEL
       </a>
     </button>
-    <button mat-raised-button color="primary">
-      <a routerLink="/newGroupStep2" class='color'>
-        NEXT
-      </a>
+    <button mat-raised-button color="primary" (click)="onNextClick()">
+      NEXT
     </button>
   </div>
   <div class="example-container">
@@ -18,7 +16,7 @@
 
   <mat-selection-list>
     <div *ngFor="let user of users" class='step1-list-show'>
-      <mat-list-option value="{{user.id}}">
+      <mat-list-option value="{{user.id}}" selected={{checkSelect(user.id)}}>
         <div class='step1-list'>
           <img src="{{user.imagepath}}">
           <div>{{user.username}}</div>

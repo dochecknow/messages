@@ -18,6 +18,13 @@ export class UserService {
     getUsers(): Promise<User[]> {
         return Promise.resolve(Users);
     }
+    getUsersByID(ids: string): Promise<User[]> {
+        if (ids === null) {
+            return Promise.resolve(Users);
+        }
+        const idArray = ids.split(',');
+        return Promise.resolve(Users.filter(u => idArray.indexOf(u.id) > -1));
+    }
     getUser(id: string): Promise<User> {
         return this.getUsers()
             .then(userArray => userArray.find(user => user.id === id));
