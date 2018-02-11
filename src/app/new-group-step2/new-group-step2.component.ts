@@ -61,10 +61,12 @@ export class NewGroupStep2Component implements OnInit {
 }
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'dialog-overview-example-dialog',
   templateUrl: './dialog-overview-example-dialog.html',
   styleUrls: ['./new-group-step2.component.css']
 })
+// tslint:disable-next-line:component-class-suffix
 export class DialogOverviewExampleDialog {
 
   constructor(

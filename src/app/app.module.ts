@@ -7,7 +7,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageComponent } from './message/message.component';
 import { NewGroupStep1Component } from './new-group-step1/new-group-step1.component';
 import { NewGroupStep2Component, DialogOverviewExampleDialog } from './new-group-step2/new-group-step2.component';
-import { GroupComponent } from './group/group.component'
+import { GroupComponent } from './group/group.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
