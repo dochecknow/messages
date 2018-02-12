@@ -12,6 +12,7 @@
 
 <div class='message-main'>
   <div class='left chat-list'>
+    <!-- RORY added in observable -->
     <div *ngFor="let msg of currentMsgs$|async">
       <img src='{{ msg.imageSender}}'>
       <div>
