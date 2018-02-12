@@ -12,7 +12,7 @@
 
 <div class='message-main'>
   <div class='left chat-list'>
-    <div *ngFor="let msg of otherMessages">
+    <div *ngFor="let msg of currentMsgs$|async">
       <img src='{{ msg.imageSender}}'>
       <div>
         <i>{{ msg.nameSender}}</i>
