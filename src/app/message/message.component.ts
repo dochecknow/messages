@@ -6,18 +6,44 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import { GroupService } from '../services/group.service';
 import { Group } from '../models/group.model';
+
+// RORY new imports
+import {BehaviorSubject} from "rxjs/BehaviorSubject"
+import {Observable} from 'rxjs/Observable';
+//
+
 @Component({
   selector: 'app-message',
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
+  // RORY new types
+  currentMsgs$: Observable<Messages[]>;
+  currentMsgSubject$: BehaviorSubject<Messages[]>;
+  //
+
   myUserID = 'MineID';
   group: Group = Group.createNew();
   sentMessage: Messages = new Messages('', '', '', 1, '', '', '', ''); // Dummy data
   constructor(private messageService: MessageService,
     private groupService: GroupService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute) {
+
+// RORY new observables
+  this.currentMsgSubject$ = new BehaviorSubject<Messages[]>([{            idSender: 'aaa',
+     idGroup:	'aaa',
+     message:	'aaa',
+     timestamp:	1111,
+     imageSender:	'aaa',
+     imageGroup:	'aaa',
+     nameSender:	'aaa',
+     nameGroup:	'aaa',
+  }])
+  this.currentMsgs$ = this.currentMsgSubject$.asObservable();
+//
+
+     }
   otherMessages: Messages[];
   mineMessage: Messages[];
   getMessages(): void {
@@ -40,6 +66,8 @@ export class MessageComponent implements OnInit {
     }
   }
   addMessage(): void {
+   
+   
     if (this.sentMessage.message === '') {
       return;
     }
@@ -51,6 +79,12 @@ export class MessageComponent implements OnInit {
       '',
       'Me',
       '');
+    
+    // RORY new subject
+    this.currentMsgs$.subscribe(arr => {
+      arr.push(toSentMessage)
+    })
+    //
 
     this.messageService.sentMessage(toSentMessage);
     this.group.LatestMessageUser = 'Me';
