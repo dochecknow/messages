@@ -17,30 +17,31 @@
                 <mat-tab label="Info">
                     <div class="company-container">
                         <mat-form-field>
-                            <input matInput type="text" placeholder="Company Name" value="Shinetech">
+                            <input matInput type="text" placeholder="Company Name" (blur)='onKey($event)' [(ngModel)]="profile.name" >
                         </mat-form-field>
                         <mat-form-field>
-                            <textarea matInput placeholder="Address 1">Level 5, 7 Eden Drive Road, Macquarie Park, North Ryde, NSW 2148</textarea>
+                            <textarea matInput placeholder="Address 1" (blur)='onKey($event)' [(ngModel)]="profile.address1"></textarea>
                         </mat-form-field>
                         <mat-form-field>
-                            <textarea matInput placeholder="Address 2">Level 5, 7 Eden Drive Road, Macquarie Park, North Ryde, NSW 2148</textarea>
+                            <textarea matInput placeholder="Address 2" (blur)='onKey($event)' [(ngModel)]="profile.address2"></textarea>
                         </mat-form-field>
                         <mat-form-field>
-                            <textarea matInput placeholder="Address 3">Level 5, 7 Eden Drive Road, Macquarie Park, North Ryde, NSW 2148</textarea>
+                            <textarea matInput placeholder="Address 3" (blur)='onKey($event)' [(ngModel)]="profile.address3"></textarea>
                         </mat-form-field>
                         <div class="rowDirection">
                             <mat-form-field class="half-width">
-                                <input matInput type="text" placeholder="Country" value="China">
+                                <input matInput type="text" placeholder="Country" (blur)='onKey($event)' [(ngModel)]="profile.country" >
                             </mat-form-field>
                             <mat-form-field class="half-width">
-                                <input matInput type="text" placeholder="ABN" value="Test ABN">
+                                <input matInput type="text" placeholder="ABN" (blur)='onKey($event)' [(ngModel)]="profile.ABN" >
                             </mat-form-field>
                         </div>
                         <mat-form-field>
-                            <input matInput type="text" placeholder="ZIP" value="10000">
+                            <input matInput type="text" placeholder="ZIP" (blur)='onKey($event)' [(ngModel)]="profile.ZIP">
                         </mat-form-field>
                     </div>
-               
+                </mat-tab>
+                <mat-tab label="Users">
                     <div class="teamDiv">
                         <div class="rowDirection">
                             <span class="teamTitle">TEAM</span>

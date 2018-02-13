@@ -20,22 +20,22 @@
     <div>
         <div class="detail-container">
             <mat-form-field>
-                <input matInput type="text" placeholder="Name" value="Kevin Wang">
+                <input matInput type="text" placeholder="Name" (blur)='onKey($event)' [(ngModel)]="profile.name">
             </mat-form-field>
             <mat-form-field>
-                <input matInput type="tel" placeholder="Phone" value="123456789">
+                <input matInput type="tel" placeholder="Phone" (blur)='onKey($event)' [(ngModel)]="profile.phone">
             </mat-form-field>
             <mat-form-field>
-                <input matInput type="email" placeholder="Email" value="wangsm@shinetechchina.com">
+                <input matInput type="email" placeholder="Email" (blur)='onKey($event)' [(ngModel)]="profile.email">
             </mat-form-field>
 
             <mat-form-field>
-                <textarea matInput placeholder="Position">Level 5, 7 Eden Drive Road, Macquarie Park, North Ryde, NSW 2148</textarea>
+                <textarea matInput placeholder="Position" (blur)='onKey($event)' [(ngModel)]="profile.position"></textarea>
             </mat-form-field>
             <div>
                 <label>Status: </label>
-                <mat-radio-group>
-                    <mat-radio-button value="Available" checked='true'>Available</mat-radio-button>
+                <mat-radio-group [(ngModel)]="profile.status" (change)='onKey($event)'>
+                    <mat-radio-button value="Available">Available</mat-radio-button>
                     <mat-radio-button value="Onleave">On-leave</mat-radio-button>
                 </mat-radio-group>
             </div>

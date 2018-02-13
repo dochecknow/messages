@@ -54,6 +54,8 @@ import { MessageService } from './services/messages.service';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
+import { PersonalProfileService } from './services/personal-profile.service';
+import { CompanyProfileService } from './services/company-profile.service';
 
 
 const appRoutes: Routes = [
@@ -143,6 +145,6 @@ const appRoutes: Routes = [
   ],
   entryComponents: [NewGroupStep2Component, DialogOverviewExampleDialog],
   bootstrap: [AppComponent],
-  providers: [GroupService, MessageService, UserService],
+  providers: [GroupService, MessageService, UserService, PersonalProfileService, CompanyProfileService],
 })
 export class AppModule { }
