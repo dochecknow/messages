@@ -82,7 +82,7 @@ const appRoutes: Routes = [
     NewGroupStep1Component,
     NewGroupStep2Component,
     PersonalProfileComponent,
-    CompanyProfileComponent
+    CompanyProfileComponent,
     DialogOverviewExampleDialog,
     GroupComponent,
   ],
