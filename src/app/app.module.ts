@@ -57,6 +57,19 @@ import { CompanyProfileComponent } from './company-profile/company-profile.compo
 import { PersonalProfileService } from './services/personal-profile.service';
 import { CompanyProfileService } from './services/company-profile.service';
 import { Op10sellComponent } from './op10sell/op10sell.component';
+import { Op20meComponent } from './op20me/op20me.component';
+import { Op22profileComponent } from './op22profile/op22profile.component';
+import { Op28productsComponent } from './op28products/op28products.component';
+import { Op30buyComponent } from './op30buy/op30buy.component';
+import { Op50shopComponent } from './op50shop/op50shop.component';
+import { Op55newOfferComponent } from './op55new-offer/op55new-offer.component';
+import { Op57newShopitemComponent } from './op57new-shopitem/op57new-shopitem.component';
+import { Op90tenderComponent } from './op90tender/op90tender.component';
+import { Op80bidsComponent } from './op80bids/op80bids.component';
+import { Op85bidsComponent } from './op85bids/op85bids.component';
+import { Op85bidComponent } from './op85bid/op85bid.component';
+import { Op140ticketsComponent } from './op140tickets/op140tickets.component';
+import { Op143shareComponent } from './op143share/op143share.component';
 
 
 const appRoutes: Routes = [
@@ -87,6 +100,19 @@ const appRoutes: Routes = [
     DialogOverviewExampleDialog,
     GroupComponent,
     Op10sellComponent,
+    Op20meComponent,
+    Op22profileComponent,
+    Op28productsComponent,
+    Op30buyComponent,
+    Op50shopComponent,
+    Op55newOfferComponent,
+    Op57newShopitemComponent,
+    Op90tenderComponent,
+    Op80bidsComponent,
+    Op85bidsComponent,
+    Op85bidComponent,
+    Op140ticketsComponent,
+    Op143shareComponent,
   ],
   exports: [
     MatAutocompleteModule,
