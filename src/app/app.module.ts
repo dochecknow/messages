@@ -56,6 +56,7 @@ import { UserService } from './services/user.service';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
 import { PersonalProfileService } from './services/personal-profile.service';
 import { CompanyProfileService } from './services/company-profile.service';
+import { Op10sellComponent } from './op10sell/op10sell.component';
 
 
 const appRoutes: Routes = [
@@ -85,6 +86,7 @@ const appRoutes: Routes = [
     CompanyProfileComponent,
     DialogOverviewExampleDialog,
     GroupComponent,
+    Op10sellComponent,
   ],
   exports: [
     MatAutocompleteModule,
