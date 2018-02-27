@@ -1,0 +1,62 @@
+.messages-top{
+  position: fixed;
+  top:0;
+  left:0;
+  padding:2%;
+  width: 96%;
+  z-index: 1000;
+  background: white;
+}
+
+
+
+.step1{
+    display:flex;
+    justify-content:space-between;
+    padding:0 0 8px 0;
+}
+.step1 .mat-list-text{
+    padding-left:0
+}
+.step1-list{
+    display:flex;
+    align-items:center;
+    /* padding:0 -16px; */
+}
+.step1-list img{
+    width:40px;
+    height:40px;
+}
+.step1-list div{
+    margin-left:8px
+}
+#chats-list{
+  margin-top: 121px;
+}
+
+
+.user-chat *{
+  display: block;
+}
+.user-chat span{
+line-height: 28px;
+}
+.user-chat em{
+line-height: 20px;
+font-size: 14PX;
+color: rgba(0,0,0,.5)
+}
+em{
+    font-style: normal;
+}
+.time{
+    display: inline; 
+    font-size: 10px;
+    /* float: right; */
+    line-height: 28px;
+}
+.group-top{
+    display: flex!important;
+    align-items: baseline !important;
+    justify-content:space-between
+}

@@ -1,0 +1,73 @@
+.company-logo{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+    height: 26vh;
+    margin-top: 8px;
+    margin-bottom:20px;
+}
+
+.list .mat-list-item-content{
+    flex-direction: column!important
+}
+.company-container{
+    display: flex;
+    flex-direction: column;
+    padding:10px 30px;
+}
+.rowDirection{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.half-width{
+    width: 45%;
+}
+.teamDiv{
+    margin-top: 15px;
+    padding:10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.teamTitle{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+.step1{
+    display:flex;
+    justify-content:space-between;
+    padding:0 0 8px 0;
+}
+.step1 .mat-list-text{
+    padding-left:0
+}
+.step1-list{
+    display:flex;
+    align-items:center;
+    /* padding:0 -16px; */
+}
+.step1-list img{
+    width:40px;
+    height:40px;
+    border-radius: 5px;
+}
+
+.step1-list div{
+    margin-left:8px
+}
+.step1-list-show{
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.step1-list{
+    /* border-bottom: 1px solid rgba(0,0,0,.42); */
+}
+.step1 button a
+{
+    display: block;
+    width: 100%;
+}

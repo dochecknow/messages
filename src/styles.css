@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.Add-chat button{
+    float:right;
+    
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+.serch-width{
+  width:100%;
+}
+#chats-list .mat-list-item-content {
+  padding: 0 ;
+}
+.step1 .mat-selection-list .mat-list-item{
+  margin-bottom: 5px!important;
+}
+.mat-list .mat-list-item .mat-list-text, .mat-list .mat-list-option .mat-list-text, .mat-nav-list .mat-list-item .mat-list-text, .mat-nav-list .mat-list-option .mat-list-text, .mat-selection-list .mat-list-item .mat-list-text, .mat-selection-list .mat-list-option .mat-list-text{
+  padding:0!important;
+}
+a{
+  text-decoration: none;
+  color:#000;
+}
+a.color{
+  color:white;
+}
+.add-name .mat-expansion-panel-body{
+    /* border-bottom: 1px solid rgba(0,0,0,.08); */
+    padding:4px 16px !important;
+
+}
+
+
+#chats-list .mat-list-item{
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+#chats-list button > .mat-button-wrapper{
+  display: block;
+  height: 40px;
+}
+#chats-list button a{
+  display: block
+}
+#chats-list button img{
+  width: 40px; 
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 5px;
+  display: block;
+  float:left;
+  margin-top: 4px;
+  margin-bottom:4px;
+  
+}
+#chats-list button{
+  line-height: 48px;
+  width: 100%;
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+}
