@@ -8,5 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class RouterComponent {
-    height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) - 25 +'px';
+    height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) *0.8 +'px';
+    top = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) *0.1 +'px';
 }
