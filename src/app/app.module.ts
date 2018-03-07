@@ -82,7 +82,7 @@ const appRoutes: Routes = [
   { path: 'group', component: GroupComponent },
   { path: 'personalProfile/:id', component: PersonalProfileComponent },
   { path: 'companyProfile/:id', component: CompanyProfileComponent },
-  { path: 'router', component: RouterComponent },
+  { path: 'common', component: RouterComponent },
   {
     path: '',
     redirectTo: '/messages',
