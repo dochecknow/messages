@@ -70,6 +70,7 @@ import { Op85bidsComponent } from './op85bids/op85bids.component';
 import { Op85bidComponent } from './op85bid/op85bid.component';
 import { Op140ticketsComponent } from './op140tickets/op140tickets.component';
 import { Op143shareComponent } from './op143share/op143share.component';
+import { RouterComponent } from './router/router.component';
 
 
 const appRoutes: Routes = [
@@ -81,6 +82,7 @@ const appRoutes: Routes = [
   { path: 'group', component: GroupComponent },
   { path: 'personalProfile/:id', component: PersonalProfileComponent },
   { path: 'companyProfile/:id', component: CompanyProfileComponent },
+  { path: 'router', component: RouterComponent },
   {
     path: '',
     redirectTo: '/messages',
@@ -113,6 +115,7 @@ const appRoutes: Routes = [
     Op85bidComponent,
     Op140ticketsComponent,
     Op143shareComponent,
+    RouterComponent
   ],
   exports: [
     MatAutocompleteModule,
