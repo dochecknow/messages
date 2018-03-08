@@ -3,29 +3,29 @@
 
         <mat-grid-tile [colspan]="3" rowHeight='100px'>
             <div class="warp-left">
-                <mat-grid-list cols="9" rowHeight='100px'>
+                <mat-grid-list class='bottom-border' cols="9" rowHeight='100px'>
 
                     <mat-grid-tile [colspan]="3" rowHeight='100px'>
-                        <div class="warp-left bottom-border">
+                        <button mat-button class="warp-left  mat-button">
                             <mat-icon>shopping_cart</mat-icon>
                             <p>Buy</p>
-                        </div>
+                        </button>
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="3">
-                        <div class="warp-left bottom-border">
+                        <button mat-button class="warp-left ">
                             <mat-icon>speaker_notes</mat-icon>
                             <p>Messages</p>
-                        </div>
+                        </button>
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="3">
-                        <div class="warp-left bottom-border">
-                            <mat-icon>thumb_up</mat-icon>
+                        <button mat-button class="warp-left ">
+                            <mat-icon>gavel</mat-icon>
                             <p>Sell</p>
-                        </div>
+                        </button>
                     </mat-grid-tile>
                 </mat-grid-list>
                 <div class="warp-logo bottom-border">
-
+                    <img src="../../assets/logo.png" alt="logo">
                 </div>
                 <div class="warp-new bottom-border">
 
@@ -35,45 +35,51 @@
         </mat-grid-tile>
         <mat-grid-tile [colspan]="9">
             <div class="warp-left">
-                <mat-grid-list cols="12" rowHeight='100px' style='background:white'>
+                <mat-grid-list cols="12" class='bottom-border' rowHeight='100px' style='background:white'>
 
                     <mat-grid-tile [colspan]="2" rowHeight='100px'>
-                        <div class="warp-left bottom-border goback">
-                            <mat-icon>trending_flat</mat-icon>
-
-                        </div>
+                        <button mat-button class="warp-left goback">
+                            <mat-icon>reply_black</mat-icon>
+                        </button>
 
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="2">
-                        <div class="warp-left bottom-border">
+                        <button mat-button class="warp-left">
                             <mat-icon>perm_identity_black</mat-icon>
                             <p>Profile</p>
-                        </div>
+                        </button>
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="2">
-                        <div class="warp-left bottom-border">
+                        <button mat-button class="warp-left">
                             <mat-icon>supervisor_account</mat-icon>
                             <p>Connections</p>
-                        </div>
+                        </button>
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="2">
-                        <div class="warp-left bottom-border">
+                        <button mat-button class="warp-left">
                             <mat-icon>trending_up</mat-icon>
                             <p>Share Ticket</p>
-                        </div>
+                        </button>
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="2">
-                        <div class="warp-left bottom-border last-p" >
+                        <button mat-button class="warp-left last-p">
                             <p>Customers</p>
-                        </div>
+                        </button>
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="2">
-                        <div class="warp-left bottom-border last-p">
+                        <button mat-button class="warp-left last-p">
                             <p>Suppliers</p>
-                        </div>
+                        </button>
                     </mat-grid-tile>
+                  
                 </mat-grid-list>
+                 <div>
+                     111
+                     
+                     <!-- <buy></buy> -->
+                 </div>
             </div>
+          
         </mat-grid-tile>
     </mat-grid-list>
 </div>

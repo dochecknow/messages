@@ -71,7 +71,7 @@ import { Op85bidComponent } from './op85bid/op85bid.component';
 import { Op140ticketsComponent } from './op140tickets/op140tickets.component';
 import { Op143shareComponent } from './op143share/op143share.component';
 import { RouterComponent } from './router/router.component';
-
+import { NgxEchartsModule } from 'ngx-echarts';
 
 const appRoutes: Routes = [
   { path: 'messages', component: MessagesComponent },
@@ -83,6 +83,7 @@ const appRoutes: Routes = [
   { path: 'personalProfile/:id', component: PersonalProfileComponent },
   { path: 'companyProfile/:id', component: CompanyProfileComponent },
   { path: 'common', component: RouterComponent },
+  { path: 'Op30buyComponent', component: Op30buyComponent },
   {
     path: '',
     redirectTo: '/messages',
@@ -169,6 +170,7 @@ const appRoutes: Routes = [
     MatRadioModule,
     FormsModule,
     MatGridListModule,
+    NgxEchartsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

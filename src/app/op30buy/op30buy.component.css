@@ -1,0 +1,16 @@
+.buy > div{
+    /* display: inline-block; */
+    border: red 1px solid;
+    box-sizing: border-box;
+    float: left;
+    margin: 1%;
+    padding: 1%;
+}
+.buy > div:first-child{
+    height: 100%;
+}
+i{
+    clear: both;
+    display: block;
+    height: 0;
+}

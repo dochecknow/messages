@@ -18,11 +18,15 @@
 .bottom-border{
     border-bottom: #424242 solid 1px;
 }
-.warp-logo{
-    min-height: 160px;
+.warp-logo img{
+   width: 100%;
+   padding: 10px;
+   display: block;
+   box-sizing: border-box;
+   margin-top: 1px;
 }
 .warp-new{
-    min-height: 600px;
+    min-height: 55%;
 }
 .mat-icon{
     font-size: 40px;
@@ -35,8 +39,8 @@
     
 }
 .goback  .mat-icon{
-    transform: rotate(180deg);
-    margin-top:0.5em;
+    /* transform: rotate(180deg); */
+    margin-top:0;
      font-size: 50px;
     height: 50px;
     width: 50px; 
@@ -47,4 +51,5 @@ p{
 }
 .last-p{
     line-height: 100px;
+    font-weight: 500
 }
