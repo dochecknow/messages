@@ -11,8 +11,9 @@ export class Op30buyComponent implements OnInit {
   options: any;
   constructor() { }
   ngOnInit() {
-  
-    this.options = {
+    var that = this 
+  setTimeout(function(){
+    that.options = {
       title: {
         text: 'Sales Dashboard'
       },
@@ -48,6 +49,8 @@ export class Op30buyComponent implements OnInit {
           data: [19325, 23438, 31000, 121594, 134141, 681807]
         }
       ]
-    };
+    }
+  },1000)
+    
   }
 }

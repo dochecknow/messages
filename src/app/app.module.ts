@@ -80,7 +80,15 @@ const appRoutes: Routes = [
   { path: 'group', component: GroupComponent },
   { path: 'personalProfile/:id', component: PersonalProfileComponent },
   { path: 'companyProfile/:id', component: CompanyProfileComponent },
-  { path: 'common', component: CommonComponent },
+  {
+    path: 'common', component: CommonComponent,
+    children: [
+      {
+        path: '',
+        component: Op30buyComponent
+      }
+    ]
+  },
   { path: 'Op30buyComponent', component: Op30buyComponent },
   {
     path: '',

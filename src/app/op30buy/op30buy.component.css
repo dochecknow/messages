@@ -6,6 +6,10 @@
     margin: 1%;
     padding: 1%;
 }
+.buy{
+    padding:0 10px;
+    padding-top:80px;
+}
 .buy > div:first-child{
     height: 100%;
 }
