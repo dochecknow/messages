@@ -1,6 +1,6 @@
 .buy > div{
     /* display: inline-block; */
-    border: red 1px solid;
+    /* border: red 1px solid; */
     box-sizing: border-box;
     float: left;
     margin: 1%;
@@ -13,4 +13,17 @@ i{
     clear: both;
     display: block;
     height: 0;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 6px;
+    color:#a74d08
+}
+button .mat-icon{
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    color:#a74d08
+    
 }
