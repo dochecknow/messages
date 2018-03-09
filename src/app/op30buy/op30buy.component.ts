@@ -14,6 +14,7 @@ export class Op30buyComponent implements OnInit {
     var that = this 
   setTimeout(function(){
     that.options = {
+      color: ['#cd8d45'],
       title: {
         text: 'Sales Dashboard'
       },
@@ -42,11 +43,6 @@ export class Op30buyComponent implements OnInit {
           name: '2011年',
           type: 'bar',
           data: [18203, 23489, 29034, 104970, 131744, 630230]
-        },
-        {
-          name: '2012年',
-          type: 'bar',
-          data: [19325, 23438, 31000, 121594, 134141, 681807]
         }
       ]
     }

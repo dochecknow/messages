@@ -11,7 +11,17 @@
     padding-top:80px;
 }
 .buy > div:first-child{
-    height: 100%;
+    background: white
+}
+.buy > .link{
+    /* height: 500px;
+    padding-top: 0 !important; */
+    /* position: relative;
+    top:0;
+    bottom: 0;
+    right: 0; */
+    /* display: flex;
+    flex-direction: column; */
 }
 i{
     clear: both;
@@ -19,15 +29,21 @@ i{
     height: 0;
 }
 button{
+    font-weight: 600;
     width: 100%;
     padding: 10px;
     margin-bottom: 6px;
-    color:#a74d08
+    color:#cd8d45;
+    background: white;
 }
 button .mat-icon{
-    font-size: 40px;
-    width: 40px;
-    height: 40px;
-    color:#a74d08
+    font-size: 56px;
+    width: 80px;
+    height: 56px;
+    color:#cd8d45
     
+}
+button img{
+    display: block;
+    width: 80px;
 }

@@ -1,26 +1,37 @@
 <div class='buy'>
-  <div style='width:68%'>
-    <div echarts [options]="options" [loading]="isLoading" class="demo-chart">
+  <div style='width:70%'>
+    <div echarts [options]="options" class="demo-chart" style='height:500px'>
     </div>
   </div>
-  <div style='width:28%'>
-    <button mat-button >
-      <mat-icon>insert_drive_file</mat-icon>
-      <div>New Offer</div>
+  <div style='width:26%;padding-top:0' class='link'>
+    <button mat-button>
+      <!-- <mat-icon>insert_drive_file</mat-icon>
+      <div>New Offer</div> -->
+      <span class="mat-button-wrapper">
+        <div class="mat-icon material-icons" role="img" aria-hidden="true">
+          <img src="../../assets/images/buy-btn1.png" alt="">
+        </div>
+        <div _ngcontent-c6="">New Offer</div>
+      </span>
     </button>
-    <button mat-button >
-      <mat-icon>airport_shuttle</mat-icon>
-      <div>Kiosk</div>
+    <button mat-button>
+      <span class="mat-button-wrapper">
+        <div class="mat-icon material-icons" role="img" aria-hidden="true">
+          <img src="../../assets/images/buy-btn2.png" alt="">
+        </div>
+        <div _ngcontent-c6="">Kiosk</div>
+      </span>
+
     </button>
-    <button mat-button >
-     
+    <button mat-button>
+
       <div>Distribution List</div>
     </button>
-    <button mat-button >
-      
+    <button mat-button>
+
       <div>Products</div>
     </button>
   </div>
   <i style='clear:both'></i>
-  
+
 </div>

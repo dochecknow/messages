@@ -11,6 +11,7 @@
 }
 .warp .warp-left{
     background: white;
+    /* color:#cd8d45; */
 }
 .warp{
     border: #424242 solid 1px;
@@ -55,4 +56,11 @@ p{
 .last-p{
     line-height: 100px;
     font-weight: 500
+}
+.warp-right{
+    background: #f3f3f4 !important
+}
+.warp-left img{
+    display: block;
+    width:40px;
 }
