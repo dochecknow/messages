@@ -47,3 +47,14 @@ button img{
     display: block;
     width: 80px;
 }
+
+
+/* SVG */
+
+.stKIOSK {
+    clip-path: url(#SVGID_KIOSK_2);
+    fill: #808285;
+}
+button:hover .stKIOSK{
+    fill:#cd8d45
+}

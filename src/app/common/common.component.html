@@ -3,13 +3,26 @@
 
         <mat-grid-tile [colspan]="3" rowHeight='100px'>
             <div class="warp-left">
-                <mat-grid-list class='bottom-border' cols="9" rowHeight='100px'>
+                <mat-grid-list class='bottom-border warp-left-btn' cols="9" rowHeight='100px'>
 
                     <mat-grid-tile [colspan]="3" rowHeight='100px'>
                         <button mat-button class="warp-left  mat-button">
                             <span class="mat-button-wrapper">
                                 <div class="mat-icon material-icons" role="img" aria-hidden="true">
-                                    <img src="../../assets/images/top_btn_02.png" alt="">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 37.7 34" style="enable-background:new 0 0 37.7 34;" xml:space="preserve">
+                                        <g>
+                                            <defs>
+                                                <rect id="SVGID_1_" y="0" width="37.7" height="34" />
+                                            </defs>
+                                            <clipPath id="SVGID_2_">
+                                                <use xlink:href="#SVGID_1_" style="overflow:visible;" />
+                                            </clipPath>
+                                            <path class="st0" d="M32.7,30c0-1.7-1.4-3-3-3c-1.7,0-3,1.4-3,3c0,1.7,1.4,3,3,3C31.3,33,32.7,31.7,32.7,30z M16.3,30
+                                                                		c0-1.7-1.4-3-3-3s-3,1.4-3,3c0,1.7,1.4,3,3,3S16.3,31.7,16.3,30z M30.3,27.1H13.3 M6.4,6.3h30l-4.7,13.3l-19.9,2.9 M0.1,0.9
+                                                                		l4.7,0.3l1.7,5.2L13.1,27" />
+                                        </g>
+                                    </svg>
                                 </div>
                                 <p>Buy</p>
                             </span>
@@ -19,7 +32,22 @@
                     <mat-grid-tile [colspan]="3">
                         <button mat-button class="warp-left ">
                             <div class="mat-icon material-icons" role="img" aria-hidden="true">
-                                <img src="../../assets/images/top_btn_06.png" alt="">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 44.7 38" style="enable-background:new 0 0 44.7 38;" xml:space="preserve">
+                                <rect x="11.3" y="12.7" class="st1" width="5.6" height="5.6" />
+                                <rect x="19.3" y="12.7" class="st1" width="5.6" height="5.6" />
+                                <rect x="27.7" y="12.7" class="st1" width="5.6" height="5.6" />
+                                <g>
+                                    <defs>
+                                        <rect id="SVGID_3_" y="0" width="44.7" height="38" />
+                                    </defs>
+                                    <clipPath id="SVGID_4_">
+                                        <use xlink:href="#SVGID_3_" style="overflow:visible;" />
+                                    </clipPath>
+                                    <polygon class="st2" points="43.8,0.9 0.8,0.9 0.8,29.4 5,29.4 5.1,35.9 11.6,29.4 43.8,29.4" />
+                                </g>
+                            </svg>
+
                             </div>
                             <p>Messages</p>
                         </button>
@@ -28,6 +56,7 @@
                         <button mat-button class="warp-left ">
                             <div class="mat-icon material-icons" role="img" aria-hidden="true">
                                 <img src="../../assets/images/top_btn_08.png" alt="">
+
                             </div>
                             <p>Sell</p>
                         </button>
@@ -37,46 +66,26 @@
                     <img src="../../assets/logo.png" alt="logo">
                 </div>
                 <div class="warp-new top-border">
-                    <mat-card role="group">
-                        <mat-card-header>
-                            <mat-card-title>
-                                <b>Company News</b>
-                            </mat-card-title>
-                        </mat-card-header>
-                        <mat-list role="list">
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some company news</a>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some Company news</a>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some company news</a>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some Company news</a>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some company news</a>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some Company news</a>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some company news</a>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some Company news</a>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some company news</a>
-                            </mat-list-item>
-                            <mat-list-item role="listitem">
-                                <a href="#">here are some Company news</a>
-                            </mat-list-item>
-                        </mat-list>
-                    </mat-card>
+                    <b>Company News</b>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem ">
+                            <mat-icon>rss_feed</mat-icon>
+                            <a href="#">here are some company news</a>
+                        </mat-list-item>
+                        <mat-list-item role="listitem ">
+                            <mat-icon>rss_feed</mat-icon>
+                            <a href="#">here are some company news</a>
+                        </mat-list-item>
+                        <mat-list-item role="listitem ">
+                            <mat-icon>rss_feed</mat-icon>
+                            <a href="#">here are some company news</a>
+                        </mat-list-item>
+                        <mat-list-item role="listitem ">
+                            <mat-icon>rss_feed</mat-icon>
+                            <a href="#">here are some company news</a>
+                        </mat-list-item>
 
+                    </mat-list>
                 </div>
             </div>
 

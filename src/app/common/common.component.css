@@ -32,7 +32,7 @@
 .warp-new{
     min-height: 55%;
 }
-.mat-icon{
+.warp-left .mat-icon{
     font-size: 40px;
     height: 40px;
     width: 40px;
@@ -41,6 +41,21 @@
     display: block;
     margin-top:0.5em; 
     
+}
+.warp-new .mat-icon{
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    margin:  0 ;
+    margin-right: 6px;
+    color:#cd8d45
+    /* display: block; */
+    /* margin-top:0.5em;  */
+    
+}
+.warp-new a{
+    padding: 5px;
+    border-bottom:1px #424242 dashed
 }
 .goback  .mat-icon{
     /* transform: rotate(180deg); */
@@ -63,4 +78,33 @@ p{
 .bottom-border img{
     display: block;
     width:40px;
+}
+b{
+    padding-top: 1em;
+    padding-left: 1em;
+    display: block;
+}
+
+
+
+
+/* svg */
+
+.st0 {
+    clip-path: url(#SVGID_2_);
+    fill: none;
+    stroke: #6D6E71;
+    stroke-width: 1.883;
+    stroke-miterlimit: 10;
+}
+.st1 {
+    fill: #6D6E71;
+}
+
+.st2 {
+    clip-path: url(#SVGID_4_);
+    fill: none;
+    stroke: #6D6E71;
+    stroke-width: 1.7;
+    stroke-miterlimit: 10;
 }
