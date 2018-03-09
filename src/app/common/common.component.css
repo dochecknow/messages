@@ -18,9 +18,12 @@
 .bottom-border{
     border-bottom: #424242 solid 1px;
 }
+.top-border{
+    border-top: #424242 solid 1px;
+}
 .warp-logo img{
    width: 100%;
-   padding: 10px;
+   padding: 30px;
    display: block;
    box-sizing: border-box;
    margin-top: 1px;
