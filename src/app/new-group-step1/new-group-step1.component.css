@@ -1,3 +1,6 @@
+.step{
+    padding: 15px;
+}
 .step1{
     display:flex;
     justify-content:space-between;

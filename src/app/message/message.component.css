@@ -1,3 +1,7 @@
+.message-warp{
+    display: flex;
+    flex-direction: column;
+}
 .mat-toolbar.mat-toolbar-single-row{
     height: 40px;
     font-size: 18px;
@@ -6,10 +10,11 @@
      justify-content: space-between;
 }
 .message{
-    position: fixed;
+    position: relative;
     top:0;
     width: 100%;
     left:0px;
+    display: block;
 }
 .message button{
     box-shadow:none;
@@ -23,7 +28,7 @@
 .message-bottom{
     display:flex;
     
-    position: fixed;
+    position: absolute;
     padding:0 8px;
     width: 96%;
     left:0px;
@@ -43,6 +48,7 @@ flex-grow:2;
 .message-main{
     margin-top:41px;
     padding-top:5px;
+    padding: 5px 15px;
 }
 .message-main .chat-list > div{
     display:flex;

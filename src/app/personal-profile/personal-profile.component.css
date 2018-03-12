@@ -1,10 +1,13 @@
+.warp{
+    padding: 15px;
+}
 .personal-logo{
     display: flex;
     align-items:center;
     justify-content:center;
     position: relative;
     height: 26vh;
-    margin-top: 8px;
+  
     margin-bottom:20px;
 }
 .personal-logo div{
@@ -13,6 +16,8 @@
     position: relative;
     border-radius: 2PX;
     width: 40%;
+    width: 140px;
+    margin-top: 8px;
     height: 5em;
     background: white;
     bottom:-20%;

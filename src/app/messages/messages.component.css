@@ -1,7 +1,7 @@
 .messages-top{
-  position: fixed;
-  top:0;
-  left:0;
+  /* position: fixed; */
+  /* top:0;
+  left:0; */
   padding:2%;
   width: 96%;
   z-index: 1000;
@@ -31,7 +31,7 @@
     margin-left:8px
 }
 #chats-list{
-  margin-top: 121px;
+  /* margin-top: 121px; */
 }
 
 

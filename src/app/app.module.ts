@@ -80,24 +80,8 @@ const appRoutes: Routes = [
   { path: 'group', component: GroupComponent },
   { path: 'personalProfile/:id', component: PersonalProfileComponent },
   { path: 'companyProfile/:id', component: CompanyProfileComponent },
-  {
-    path: 'Op30buy', component: CommonComponent,
-    children: [
-      {
-        path: '',
-        component: Op30buyComponent
-      }
-    ]
-  },
-  {
-    path: 'Op10sell', component: CommonComponent,
-    children: [
-      {
-        path: '',
-        component: Op10sellComponent
-      }
-    ]
-  }
+  {path: 'Op30buy', component: Op30buyComponent},
+  { path: 'Op10sell', component: Op10sellComponent}
 ];
 
 @NgModule({

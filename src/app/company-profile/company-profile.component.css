@@ -1,3 +1,6 @@
+.warp{
+    padding: 15px;
+}
 .company-logo{
     display: flex;
     align-items:center;
