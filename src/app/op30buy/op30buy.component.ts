@@ -16,7 +16,7 @@ export class Op30buyComponent implements OnInit {
     that.options = {
       color: ['#cd8d45'],
       title: {
-        text: 'Sales Dashboard'
+        text: 'Buy Dashboard'
       },
       tooltip: {
         trigger: 'axis',

@@ -81,7 +81,7 @@ const appRoutes: Routes = [
   { path: 'personalProfile/:id', component: PersonalProfileComponent },
   { path: 'companyProfile/:id', component: CompanyProfileComponent },
   {
-    path: 'common', component: CommonComponent,
+    path: 'Op30buy', component: CommonComponent,
     children: [
       {
         path: '',
@@ -89,11 +89,14 @@ const appRoutes: Routes = [
       }
     ]
   },
-  { path: 'Op30buyComponent', component: Op30buyComponent },
   {
-    path: '',
-    redirectTo: '/messages',
-    pathMatch: 'full'
+    path: 'Op10sell', component: CommonComponent,
+    children: [
+      {
+        path: '',
+        component: Op10sellComponent
+      }
+    ]
   }
 ];
 
