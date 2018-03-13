@@ -46,6 +46,7 @@ import {
   MatTooltipModule,
   MatOption,
   MatTab,
+
 } from '@angular/material';
 import { GroupService } from './services/group.service';
 import { MessageService } from './services/messages.service';
@@ -81,6 +82,7 @@ const appRoutes: Routes = [
   { path: 'personalProfile/:id', component: PersonalProfileComponent },
   { path: 'companyProfile/:id', component: CompanyProfileComponent },
   {path: 'Op30buy', component: Op30buyComponent},
+  { path: 'Op55newOffer', component: Op55newOfferComponent},
   { path: 'Op10sell', component: Op10sellComponent}
 ];
 
@@ -144,6 +146,7 @@ const appRoutes: Routes = [
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+  
   ],
   imports: [
     BrowserModule,
@@ -161,6 +164,7 @@ const appRoutes: Routes = [
     MatTableModule,
     MatTabsModule,
     MatRadioModule,
+    MatDatepickerModule,
     FormsModule,
     MatGridListModule,
     NgxEchartsModule,

@@ -143,10 +143,13 @@
 
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="2">
-                        <button mat-button class="warp-left">
-                            <mat-icon>supervisor_account</mat-icon>
-                            <p>Connections</p>
-                        </button>
+                        <a routerLink="/Op55newOffer" routerLinkActive="active">
+                            <button mat-button class="warp-left">
+                                <mat-icon>supervisor_account</mat-icon>
+                                <p>Connections</p>
+                            </button>
+                        </a>
+                        
                     </mat-grid-tile>
                     <mat-grid-tile [colspan]="2">
                         <button mat-button class="warp-left">
@@ -166,9 +169,9 @@
                     </mat-grid-tile>
 
                 </mat-grid-list>
-                <div>
+                <div class="router-warp">
                     <router-outlet></router-outlet>
-                    <!-- <buy></buy> -->
+                    
                 </div>
             </div>
 
