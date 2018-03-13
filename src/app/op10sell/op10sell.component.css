@@ -55,6 +55,25 @@ button img{
     clip-path: url(#SVGID_KIOSK_2);
     fill: #808285;
 }
-button:hover .stKIOSK{
-    fill:#cd8d45
+button:hover .stKIOSK,button:hover .st1Offer ,button:hover .st0Offer{
+    stroke:#cd8d45
+}
+
+
+.st0Offer {
+    clip-path: url(#SVGID_2_Offer);
+    fill: none;
+    stroke: #6D6E71;
+    stroke-width: 2.768;
+    stroke-miterlimit: 10;
+}
+
+.st1Offer {
+    clip-path: url(#SVGID_2_Offer);
+    fill: none;
+    stroke: #6D6E71;
+    stroke-width: 2.768;
+    stroke-linecap: round;
+    stroke-linejoin: bevel;
+    stroke-miterlimit: 10;
 }
