@@ -1,10 +1,4 @@
-.active{
-    color: #cd8d45;
-    fill: #cd8d45;
-}
-.active rect,.active path{
-    fill: #cd8d45;
-}
+
 .warp-left{
     /* border: rgba(0,0,0,.42) solid 1px; */
     height: 100%;
@@ -104,10 +98,14 @@ b{
     stroke-width: 1.883;
     stroke-miterlimit: 10;
 }
-.st1 {
+.st1-Messages, {
     fill: #6D6E71;
+    stroke:#6D6E71;
 }
-
+.st1{
+    fill:white;
+    stroke:#6D6E71;
+}
 .st2 {
     clip-path: url(#SVGID_4_);
     fill: none;
@@ -115,3 +113,24 @@ b{
     stroke-width: 1.7;
     stroke-miterlimit: 10;
 }
+
+.st0SELL{clip-path:url(#SVGID_2_SELL);fill:#6D6E71;}
+.st1SELL{clip-path:url(#SVGID_2_SELL);fill:none;stroke:#6D6E71;stroke-width:1.5;stroke-miterlimit:10;}
+.st2SELL{clip-path:url(#SVGID_2_SELL);}
+.st3SELL{fill:#6D6E71;}
+.st4SELL{font-family:'Helvetica';
+    /* color:red; */
+    background:red;
+    }
+.st5SELL{font-size:12px;}
+.active *{
+    color: #cd8d45;
+    stroke: #cd8d45;
+
+}
+.active .st1-Messages{
+    fill: #cd8d45;
+}
+/* .active rect,{
+    fill: #cd8d45;
+} */

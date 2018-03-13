@@ -95,11 +95,11 @@ b{
 .st0 {
     clip-path: url(#SVGID_2_);
     fill: none;
-    stroke: #6D6E71;
+    /* stroke: #6D6E71; */
     stroke-width: 1.883;
     stroke-miterlimit: 10;
 }
-.st1 {
+.st1-Messages {
     fill: #6D6E71;
 }
 
@@ -110,3 +110,5 @@ b{
     stroke-width: 1.7;
     stroke-miterlimit: 10;
 }
+
+
