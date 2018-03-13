@@ -1,5 +1,9 @@
 .warp{
     padding: 15px;
+    height: 640px;
+    overflow-y: scroll;
+   
+    margin: 0 auto;
 }
 .company-logo{
     display: flex;
