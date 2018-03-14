@@ -84,6 +84,7 @@ const appRoutes: Routes = [
   {path: 'Op30buy', component: Op30buyComponent},
   { path: 'Op55newOffer', component: Op55newOfferComponent},
   { path: 'Op10sell', component: Op10sellComponent}
+  { path: 'op140tickets', component: Op140ticketsComponent}
 ];
 
 @NgModule({
