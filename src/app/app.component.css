@@ -95,6 +95,9 @@ b{
 
 
 /* svg */
+.mat-icon{
+    color:#6D6E71
+}
 
 .st0 {
     clip-path: url(#SVGID_2_);
@@ -139,3 +142,17 @@ b{
 /* .active rect,{
     fill: #cd8d45;
 } */
+
+
+.st0Tick {
+    clip-path: url(#SVGID_2_Tick);
+    fill: #FFFFFF;
+}
+
+.st1Tick {
+    clip-path: url(#SVGID_2_Tick);
+    fill: none;
+    stroke: #6D6E71;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
