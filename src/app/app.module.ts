@@ -83,8 +83,9 @@ const appRoutes: Routes = [
   { path: 'companyProfile/:id', component: CompanyProfileComponent },
   {path: 'Op30buy', component: Op30buyComponent},
   { path: 'Op55newOffer', component: Op55newOfferComponent},
-  { path: 'Op10sell', component: Op10sellComponent}
-  { path: 'op140tickets', component: Op140ticketsComponent}
+  { path: 'Op10sell', component: Op10sellComponent},
+  { path: 'op140tickets', component: Op140ticketsComponent},
+  { path: 'op143share', component: Op143shareComponent},
 ];
 
 @NgModule({
