@@ -1,0 +1,23 @@
+#updated{
+    display: block;
+    line-height: 36px;
+    height: 36px;
+    /* width: 90px; */
+    position: relative;
+}
+#updated input,#updated button{
+    width: 90px;
+    line-height: 36px;
+    position: absolute;
+    /* z-index: -1; */
+}
+#updated input{
+    z-index: 1000;
+    opacity: 0;
+    height: 36px;
+    width: 90px;
+}
+#updated p{
+    margin: 0;
+    padding-left: 95px;
+}

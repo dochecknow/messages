@@ -70,6 +70,7 @@ import { Op85bidComponent } from './op85bid/op85bid.component';
 import { Op140ticketsComponent } from './op140tickets/op140tickets.component';
 import { Op143shareComponent } from './op143share/op143share.component';
 import { CommonComponent } from './common/common.component';
+import { UploadComponent } from './upload/upload.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 
 const appRoutes: Routes = [
@@ -87,6 +88,7 @@ const appRoutes: Routes = [
   { path: 'op140tickets', component: Op140ticketsComponent},
   { path: 'op143share', component: Op143shareComponent},
   { path: 'Op90tender', component: Op90tenderComponent},
+  { path: 'upload', component: UploadComponent},
 ];
 
 @NgModule({
@@ -114,7 +116,8 @@ const appRoutes: Routes = [
     Op85bidComponent,
     Op140ticketsComponent,
     Op143shareComponent,
-    CommonComponent
+    CommonComponent,
+    UploadComponent
   ],
   exports: [
     MatAutocompleteModule,

@@ -11,5 +11,4 @@ export class Op55newOfferComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
