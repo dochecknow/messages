@@ -46,8 +46,9 @@ import {
   MatTooltipModule,
   MatOption,
   MatTab,
-
+  
 } from '@angular/material';
+
 import { GroupService } from './services/group.service';
 import { MessageService } from './services/messages.service';
 import { FormsModule } from '@angular/forms';
@@ -152,7 +153,7 @@ const appRoutes: Routes = [
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-  
+    
   ],
   imports: [
     BrowserModule,
@@ -174,6 +175,7 @@ const appRoutes: Routes = [
     FormsModule,
     MatGridListModule,
     NgxEchartsModule,
+    MatMenuModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

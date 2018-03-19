@@ -61,6 +61,15 @@ export class MessageComponent implements OnInit {
         this.getMessages();
       });
   }
+  upload(e) {
+    console.info(e.target.files[0]);
+    if (e.target.files[0]) {
+      const file = e.target.files[0];
+      const formData = new FormData();
+      formData.append('file', file);
+      
+    }
+  }
   onKey(event: KeyboardEvent) {
     if (event.code === 'Enter') {
       this.addMessage();
@@ -90,5 +99,7 @@ export class MessageComponent implements OnInit {
     this.group.LatestMessageDate = new Date().toLocaleDateString();
     this.getMessages();
     this.sentMessage.message = '';
+
+    
   }
 }
