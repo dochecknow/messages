@@ -26,17 +26,23 @@
     width: 100%;
 }
 .message-bottom{
-    display:flex;
     
     position: absolute;
-    padding:0 8px;
+    padding:5px 8px;
     width: 96%;
     left:0px;
     bottom: 0;
+   
+    background: white;
+} 
+.message-bottom > div:first-child{
+    display:flex;
+    width: 100%; 
     align-item:center;
+    margin: 0 auto;
 } 
 .message-bottom .input{
-flex-grow:2;
+    flex-grow:2;
 }
 .message-bottom .mat-raised-button.mat-primary{
     min-width:66px;
@@ -50,6 +56,7 @@ flex-grow:2;
     margin-top:41px;
     padding-top:5px;
     padding: 5px 15px;
+    margin-bottom:66px; 
 }
 .message-main .chat-list > div{
     display:flex;
@@ -87,6 +94,9 @@ flex-grow:2;
 .message-main .chat-list.right > div{
     flex-direction:row-reverse
 }
+.message-main .chat-list > div p{
+    margin: 5px;
+}
 .message-main .chat-list.right > div div .text{
     padding: 3px 7px;
     background: white;
@@ -100,7 +110,7 @@ flex-grow:2;
 }
 
 #updated{
-    display: block;
+    /* display: block; */
     line-height: 36px;
     height: 36px;
     /* width: 90px; */
@@ -110,6 +120,7 @@ flex-grow:2;
     /* width: 90px; */
     line-height: 36px;
     position: absolute;
+    display:inline-block;
     /* z-index: -1; */
 }
 #updated input{
@@ -124,4 +135,13 @@ flex-grow:2;
 #updated p{
     margin: 0;
     padding-left: 95px;
+}
+
+
+.eject {
+    margin: 0 -24px;
+}
+
+.mat-accordion .mat-expansion-panel:not([class*=mat-elevation-z]){
+    box-shadow: none;
 }

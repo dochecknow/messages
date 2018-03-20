@@ -11,9 +11,10 @@
     </mat-toolbar>
   </div>
 
-  <div class='message-main'>
+  <div class='message-main' (click)="setStep(1)">
     <div class='left chat-list'>
       <!-- RORY added in observable -->
+
       <div *ngFor="let msg of currentMsgs$|async">
         <img src='{{ msg.imageSender}}' class="avatar">
         <div>
@@ -41,28 +42,47 @@
         </div>
       </div>
     </div>
+    <div class='right chat-list'>
+      <div *ngFor="let msg of mineMessage">
+        <img src='{{ msg.imageSender}}' class="avatar">
+        <div>
+          <i>{{ msg.nameSender}}</i>
+          <div class="text">
+            <p>
+              {{ msg.message}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <mat-menu #appMenu="matMenu" xPosition='after' yPosition='above' >
-    <button mat-menu-item id='updated'>
-      FILE
-      <input type='file' id='inputa' (change)="upload($event)">
-    </button>
-    <button mat-menu-item id='updated'>
-      PICTURE
-      <input type='file' id='inputa' (change)="upload($event)">
-    </button>
-  </mat-menu>
-
   <div class="message-bottom">
-    <mat-form-field class="input">
-      <input [(ngModel)]="sentMessage.message" (keyup)="onKey($event)" matInput placeholder="SEND MESSAGE">
-    </mat-form-field>
-    <button mat-mini-fab [matMenuTriggerFor]="appMenu">
-      <mat-icon>add</mat-icon>
-    </button>
-    <button (click)="addMessage()" mat-raised-button color="primary">
-      <mat-icon>chevron_right</mat-icon>
-    </button>
+    <div>
+      <mat-form-field class="input">
+        <input [(ngModel)]="sentMessage.message" (keyup)="onKey($event)" matInput placeholder="SEND MESSAGE">
+      </mat-form-field>
+      <button mat-mini-fab (click)="setStep(0)">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button (click)="addMessage()" mat-raised-button color="primary">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+    <div>
+      <mat-accordion >
+        <mat-expansion-panel [expanded]="step === 0">
+          <div class='eject'>
+            <button mat-raised-button color="accent" id='updated'>
+              FILE
+              <input type='file' id='inputa' (change)="upload($event)">
+            </button>
+            <button mat-raised-button color="primary" id='updated'>
+              PICTURE
+              <input type='file' id='inputa' (change)="upload($event)">
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
   </div>
 </div>

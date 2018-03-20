@@ -61,6 +61,11 @@ export class MessageComponent implements OnInit {
         this.getMessages();
       });
   }
+
+  step = 1;
+  setStep(index: number) {
+    this.step = index;
+  }
   upload(e) {
     console.info(e.target.files[0]);
     if (e.target.files[0]) {

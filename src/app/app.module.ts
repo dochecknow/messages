@@ -152,8 +152,7 @@ const appRoutes: Routes = [
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule,
-    
+    MatTooltipModule,    
   ],
   imports: [
     BrowserModule,
