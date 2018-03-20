@@ -97,6 +97,13 @@
 .message-main .chat-list > div p{
     margin: 5px;
 }
+
+.message-main .chat-list > div a{
+    margin: 5px;
+    display: block;
+    color:rgb(63, 81, 181);
+    text-decoration: rgb(63, 81, 181) underline;
+}
 .message-main .chat-list.right > div div .text{
     padding: 3px 7px;
     background: white;
