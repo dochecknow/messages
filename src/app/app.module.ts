@@ -45,8 +45,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatOption,
-  MatTab,
-  
+  MatTab,  
 } from '@angular/material';
 
 import { GroupService } from './services/group.service';

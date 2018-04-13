@@ -1,3 +1,11 @@
-<div [style.height]='height'>
-    <MenuComponent></MenuComponent>
+<div class="window">
+    <mat-grid-list cols="12" rowHeight={{height}}>
+        <mat-grid-tile [colspan]='2' class="window-left">
+            <menu-component height={{height}}></menu-component>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]='10' class="window-right">
+            window component
+            
+        </mat-grid-tile>
+    </mat-grid-list>
 </div>

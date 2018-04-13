@@ -1,0 +1,40 @@
+.mat-expansion-panel-header-title{
+ color:white;
+ font-size: 1.3em;
+ /* line-height: 98px; */
+}
+.nav{
+    border-bottom: 1px solid #717076
+}
+.news{
+    padding: 1em 24px
+}
+.news b{
+    color:#ce8d39;
+    font-size: 1.3em
+}
+
+.mat-expansion-panel-header-title span{
+    text-indent:0.5em
+}
+.nav-children button{
+    width: 100%;
+    display: block;
+    line-height: 2.5em;
+    border-bottom: 1px solid #717171;
+    font-size: 1.2em;
+    text-align:left;
+    padding:0 24px;
+    color:#5c5c5c;
+    background: #ffffff;
+}
+.menu{
+    width: 100%;
+    background: #5c5c5c;
+}
+
+.nav-children button.active, button.cdk-focused{
+    background: #ce8d39!important;
+    color:white!important;
+    
+}
