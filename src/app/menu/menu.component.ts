@@ -55,6 +55,52 @@ export class MenuComponent implements OnInit {
                 },
             ]
         },
+        {
+            title:'Messages',
+            ico:'aa',
+            id:'2',
+            children:[
+                {
+                    title: 'Offers sent',
+                    id:'9838',
+                },
+                {
+                    title: 'Tenders',
+                    id:'9842',
+                },
+                {
+                    title: 'Bids',
+                    id:'94883',
+                },
+                {
+                    title: 'Info',
+                    id:'984834',
+                },
+            ]
+        },
+        {
+            title:'Share Ticket',
+            ico:'aa',
+            id:'2',
+            children:[
+                {
+                    title: 'Offers sent',
+                    id:'9838',
+                },
+                {
+                    title: 'Tenders',
+                    id:'9842',
+                },
+                {
+                    title: 'Bids',
+                    id:'94883',
+                },
+                {
+                    title: 'Info',
+                    id:'984834',
+                },
+            ]
+        },
     ]
     constructor() { }
     @Input() height: string;

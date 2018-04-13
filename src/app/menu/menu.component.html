@@ -4,42 +4,19 @@
     </p> -->
     <mat-accordion>
         <mat-expansion-panel *ngFor="let item of data">
-            
-            <mat-expansion-panel-header class="nav"  >
+
+            <mat-expansion-panel-header class="nav">
                 <mat-panel-title>
                     <mat-icon>account_circle</mat-icon>
                     <span>{{item.title}}</span>
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <div id="nav-children" class="nav-children">
-                <button mat-button  *ngFor="let chl of item.children">
-                   {{chl.title}}
-                </button> 
-                
+                <button mat-button *ngFor="let chl of item.children">
+                    {{chl.title}}
+                </button>
+
             </div>
         </mat-expansion-panel>
     </mat-accordion>
-
-    <div class="news">
-        <b>Company News</b>
-        <mat-list role="list">
-            <mat-list-item role="listitem ">
-                <mat-icon>chevron_right</mat-icon>
-                <a href="#">here are some company news</a>
-            </mat-list-item>
-            <mat-list-item role="listitem ">
-                <mat-icon>chevron_right</mat-icon>
-                <a href="#">here are some company news</a>
-            </mat-list-item>
-            <mat-list-item role="listitem ">
-                <mat-icon>chevron_right</mat-icon>
-                <a href="#">here are some company news</a>
-            </mat-list-item>
-            <mat-list-item role="listitem ">
-                <mat-icon>chevron_right</mat-icon>
-                <a href="#">here are some company news</a>
-            </mat-list-item>
-    
-        </mat-list>
-    </div>
 </div>

@@ -43,12 +43,13 @@ import {
   MatTooltipModule,
   MatOption,
   MatTab,
-  
+
 } from '@angular/material';
 
 import { FormsModule } from '@angular/forms';
 
 import { NgxEchartsModule } from 'ngx-echarts';
+import { CompanyNewsComponent } from './company-news/company-news.component';
 
 const appRoutes: Routes = [
   { path: 'window', component: WindowComponent },
@@ -72,7 +73,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     WindowComponent,
-    MenuComponent
+    MenuComponent,
+    CompanyNewsComponent
   ],
   exports: [
     MatAutocompleteModule,
@@ -106,8 +108,8 @@ const appRoutes: Routes = [
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule,    
-    
+    MatTooltipModule,
+
   ],
   imports: [
     BrowserModule,
@@ -135,7 +137,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  entryComponents: [ MenuComponent],
+  entryComponents: [MenuComponent],
   bootstrap: [AppComponent],
   // providers: [GroupService, MessageService, UserService, PersonalProfileService, CompanyProfileService],
 })
