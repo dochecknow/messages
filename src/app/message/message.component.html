@@ -1,15 +1,11 @@
-<div [style.height]='height' class="message-box">
+<div [style.height]='height' class="message-box scroll">
     <div class="chat-list">
-        <div class="me">
+        <div  *ngFor="let item of list" class="{{item.use}}">
             <p>
-                hahaha hhahah hah
+                 {{item.text}}
             </p>
         </div>
-        <div class="she">
-            <p>
-                hahaha hhahah hah 
-            </p>
-        </div>
+        
     </div>
     <div class="input-chat">
         <mat-form-field class="message-input">

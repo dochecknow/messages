@@ -1,4 +1,4 @@
-<div class="messages scroll" [style.height]='height' class="messages">
+<div class="messages" [style.height]='height'>
     <div class="search">
             <mat-icon class="search-ico">ic_search</mat-icon>
             <mat-form-field class="center">
@@ -6,7 +6,7 @@
             </mat-form-field>
             <mat-icon class="search-ico two">ic_create</mat-icon>
     </div>
-    <div class="messages-list">
+    <div class="messages-list scroll">
         <button mat-button *ngFor="let item of data">
             <img src='{{item.ico}}' alt="">
             <div class='chat'>

@@ -1,10 +1,10 @@
 .message-box{
-    position: relative;
+
     background: #e0e1d1;
     
 }
 .message-box .input-chat{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
