@@ -1,0 +1,73 @@
+.op55{
+    display: flex;
+    padding-top: 30px;
+    
+}
+.op55 > div{
+    width: 50%;
+}
+label{
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+    line-height: 60px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    font-size: 16px;
+    color:#cd8d45
+}
+span{
+    color:#cd8d45
+
+}
+label input{
+    line-height: 50px;
+    border: none;
+    width: 60%;
+    padding: 5PX;
+    padding-left: 10px;
+    font-size:18px; 
+    /* width: 30%; */
+    /* float: right; */
+}
+.label div{
+     width: 45%;
+     display: block;
+     position: relative;
+}
+.label div input{
+    width:100%;
+     display: block;
+     box-sizing: border-box;
+}
+.label span{
+    float: right;
+}
+.label div span{
+    position: absolute;
+    left:-2em;
+    top:17px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+    height: 26px;
+    width: 26px;
+    background:#cd8d45;
+    color: white;
+    border-radius: 50%;
+}
+.offer-right{
+    padding: 15px;
+    padding-top: 0px;
+}
+.example-full-width{
+    width: 150PX;
+}
+.offer-right span{
+    margin:0 0.5em;
+}
+
+.btn button{
+    float:right;
+}
+

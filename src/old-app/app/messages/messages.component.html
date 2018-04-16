@@ -1,0 +1,44 @@
+<div class="messages-top">
+  <div class="button-row Add-chat clearfix">
+    <button mat-mini-fab color="primary">
+      <a routerLink="/newGroupStep1">
+        <svg class="icon" width="24px" height="24px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path fill="white" d="M880.15737 447.719128H575.934072V143.49583c0-35.915501-29.109546-65.025048-65.025048-65.025048s-65.025048 29.109546-65.025047 65.025048v304.223298H141.660679a65.025048 65.025048 0 0 0 0 130.050095h304.223298v304.223298c0 35.915501 29.109546 65.025048 65.025047 65.025048s65.025048-29.109546 65.025048-65.025048V577.769223h304.216073a65.025048 65.025048 0 0 0 65.025047-65.025047 65.010598 65.010598 0 0 0-65.017822-65.025048z"
+          />
+        </svg>
+      </a>
+
+    </button>
+  </div>
+  <div class="example-container">
+    <mat-form-field class="serch-width">
+      <input matInput placeholder="SEARCH" (keyup)="serchChange($event)">
+    </mat-form-field>
+  </div>
+</div>
+
+
+<div id='chats-list'>
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let group of groups">
+      <button mat-button>
+        <a routerLink='/message/{{group.id}}'>
+          <img src="{{group.imagepath}}">
+          <div class='user-chat'>
+            <span class='group-top'>
+              <span>
+                {{group.name}}
+              </span>
+              <em class="time">
+                {{group.LatestMessageDate}}
+              </em>
+            </span>
+            <em *ngIf="group.LatestMessageUser">
+              {{group.LatestMessageUser}} : {{group.LatestMessage}}
+            </em>
+          </div>
+        </a>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</div>

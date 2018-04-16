@@ -1,0 +1,90 @@
+<div class="message-warp">
+  <div class='message'>
+    <mat-toolbar>
+      <button mat-raised-button>
+        <a routerLink="/messages">BACK
+        </a>
+      </button>
+      <span>
+        {{group.name}}
+      </span>
+    </mat-toolbar>
+  </div>
+
+  <div class='message-main' (click)="setStep(1)">
+    <div class='left chat-list'>
+      <!-- RORY added in observable -->
+
+      <div *ngFor="let msg of currentMsgs$|async">
+        <img src='{{ msg.imageSender}}' class="avatar">
+        <div>
+          <i>{{ msg.nameSender}}</i>
+          <div class="text">
+            <p>
+              {{ msg.message}}
+            </p>
+            <a href="#">flie.word</a>
+            <img class='imgs' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521461916452&di=f6d0e9d8d712dc707550a69d952d3953&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F3801213fb80e7bec00e429f3232eb9389b506be1.jpg'>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='right chat-list'>
+      <div *ngFor="let msg of mineMessage">
+        <img src='{{ msg.imageSender}}' class="avatar">
+        <div>
+          <i>{{ msg.nameSender}}</i>
+          <div class="text">
+            <!-- <p>
+               {{ msg.message}}
+            </p> -->
+            <img class='imgs' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521461916452&di=f6d0e9d8d712dc707550a69d952d3953&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F3801213fb80e7bec00e429f3232eb9389b506be1.jpg'>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='right chat-list'>
+      <div *ngFor="let msg of mineMessage">
+        <img src='{{ msg.imageSender}}' class="avatar">
+        <div>
+          <i>{{ msg.nameSender}}</i>
+          <div class="text">
+            <p>
+              {{ msg.message}}
+            </p>
+            <a href="#">flie.word</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="message-bottom">
+    <div>
+      <mat-form-field class="input">
+        <input [(ngModel)]="sentMessage.message" (keyup)="onKey($event)" matInput placeholder="SEND MESSAGE">
+      </mat-form-field>
+      <button mat-mini-fab (click)="setStep(0)">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button (click)="addMessage()" mat-raised-button color="primary">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+    <div>
+      <mat-accordion >
+        <mat-expansion-panel [expanded]="step === 0">
+          <div class='eject'>
+            <button mat-raised-button color="accent" id='updated'>
+              FILE
+              <input type='file' id='inputa' (change)="upload($event)">
+            </button>
+            <button mat-raised-button color="primary" id='updated'>
+              PICTURE
+              <input type='file' id='inputa' (change)="upload($event)">
+            </button>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+</div>

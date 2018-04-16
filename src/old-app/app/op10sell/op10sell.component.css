@@ -1,0 +1,79 @@
+.buy > div{
+    /* display: inline-block; */
+    /* border: red 1px solid; */
+    box-sizing: border-box;
+    float: left;
+    margin: 1%;
+    padding: 1%;
+}
+.buy{
+    padding:0 10px;
+    padding-top:80px;
+}
+.buy > div:first-child{
+    background: white
+}
+.buy > .link{
+    /* height: 500px;
+    padding-top: 0 !important; */
+    /* position: relative;
+    top:0;
+    bottom: 0;
+    right: 0; */
+    /* display: flex;
+    flex-direction: column; */
+}
+i{
+    clear: both;
+    display: block;
+    height: 0;
+}
+button{
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 6px;
+    color:#cd8d45;
+    background: white;
+}
+button .mat-icon{
+    font-size: 56px;
+    width: 80px;
+    height: 56px;
+    color:#cd8d45
+    
+}
+button img{
+    display: block;
+    width: 80px;
+}
+
+
+/* SVG */
+
+.stKIOSK {
+    clip-path: url(#SVGID_KIOSK_2);
+    fill: #808285;
+}
+button:hover .stKIOSK,button:hover .st1Offer ,button:hover .st0Offer{
+    stroke:#cd8d45
+}
+
+
+.st0Offer {
+    clip-path: url(#SVGID_2_Offer);
+    fill: none;
+    stroke: #6D6E71;
+    stroke-width: 2.768;
+    stroke-miterlimit: 10;
+}
+
+.st1Offer {
+    clip-path: url(#SVGID_2_Offer);
+    fill: none;
+    stroke: #6D6E71;
+    stroke-width: 2.768;
+    stroke-linecap: round;
+    stroke-linejoin: bevel;
+    stroke-miterlimit: 10;
+}

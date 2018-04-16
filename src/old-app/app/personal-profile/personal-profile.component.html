@@ -1,0 +1,45 @@
+<div class="warp">
+    <!-- <div class="">
+        <button mat-raised-button>
+            <a routerLink="/messages">BACK
+            </a>
+        </button>
+
+    </div> -->
+
+    <div class='personal'>
+        <div class='personal-logo' style='margin:20px 30px; background:url("https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=71f6f27f2c7f9e2f6f351b082f31e962/500fd9f9d72a6059f550a1832334349b023bbae3.jpg") no-repeat  top'>
+            <div>
+                <span style='width:400px;height:400px;background:url("") no-repeat top '>
+                    <img src="https://i.stack.imgur.com/isckt.jpg?s=32&g=1" width="140" height="80">
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <div class="detail-container">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Name" (blur)='onKey($event)' [(ngModel)]="profile.name">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="tel" placeholder="Phone" (blur)='onKey($event)' [(ngModel)]="profile.phone">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="email" placeholder="Email" (blur)='onKey($event)' [(ngModel)]="profile.email">
+            </mat-form-field>
+
+            <mat-form-field>
+                <textarea matInput placeholder="Position" (blur)='onKey($event)' [(ngModel)]="profile.position"></textarea>
+            </mat-form-field>
+            <div>
+                <label>Status: </label>
+                <mat-radio-group [(ngModel)]="profile.status" (change)='onKey($event)'>
+                    <mat-radio-button value="Available">Available</mat-radio-button>
+                    <mat-radio-button value="Onleave">On-leave</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+    </div>
+</div>
