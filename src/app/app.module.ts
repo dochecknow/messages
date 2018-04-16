@@ -53,6 +53,7 @@ import { WindowComponent } from './window/window.component';
 import { CompanyNewsComponent } from './company-news/company-news.component';
 import {MessageWindowComponent} from './message-window/message-window.component'
 import { MessagesComponent} from './messages/messages.component'
+import { MessageComponent} from './message/message.component'
 const appRoutes: Routes = [
   { path: 'window', component: WindowComponent },
   // { path: 'message/:id', component: MessageComponent },
@@ -78,7 +79,8 @@ const appRoutes: Routes = [
     MenuComponent,
     CompanyNewsComponent,
     MessageWindowComponent,
-    MessagesComponent
+    MessagesComponent,
+    MessageComponent
   ],
   exports: [
     MatAutocompleteModule,
