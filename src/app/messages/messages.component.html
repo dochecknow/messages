@@ -1,0 +1,24 @@
+<div class="messages scroll" [style.height]='height' class="messages">
+    <div class="search">
+            <mat-icon class="search-ico">ic_search</mat-icon>
+            <mat-form-field class="center">
+                <input matInput placeholder="Search">
+            </mat-form-field>
+            <mat-icon class="search-ico two">ic_create</mat-icon>
+    </div>
+    <div class="messages-list">
+        <button mat-button *ngFor="let item of data">
+            <img src='{{item.ico}}' alt="">
+            <div class='chat'>
+                <p class='chat-name'>
+                    <b>{{item.name}}</b>
+                </p>
+                <p class='chat-time'>
+                    <span>{{item.title}}</span>
+                    <span>{{item.time}}</span>
+                </p>
+            </div>
+        </button>
+
+    </div>
+</div>

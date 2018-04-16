@@ -1,0 +1,74 @@
+.search-ico{
+    width: 50px;
+    height:50px;
+    font-size: 50px;
+    line-height: 50px;
+    text-indent: -150px;
+    /* float: left; */
+}
+.search-ico:nth-child(1){
+    color: #4b4b4b;
+}
+.search-ico.two{
+    color: white;
+    border-radius:50%;
+    background: #ce8d39;
+    padding: 5px;
+    width: 40px;
+    height:40px;
+    font-size: 40px;
+    line-height: 40px;
+    text-indent: -120px;
+}
+.messages{
+    position: relative;
+}
+.search{
+    display: flex;
+    justify-content:space-between;
+    padding-top:1.2em;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+.search .center{
+     flex-grow:2;
+     margin:0 15px;
+}
+.messages-list{
+    padding-top:85px;
+}
+.messages-list .chat{
+    flex-grow:2;
+    border-bottom:1px solid #aca89c; 
+}
+
+.messages-list button{
+    background: #f4f5f0;
+    display: block;
+    width: 100%;
+    text-align: left;
+    /* padding: 10px 16px; */
+}
+.messages-list button img{
+    float: left;
+    display: block;
+    width: 4em;
+    height: 4em;
+    padding: 6px 6px 6px 0;
+    
+}
+.messages-list .chat-name{
+    font-size:18px; 
+}
+.messages-list .chat-time{
+    display: flex;
+    line-height: 32px;
+    color: #ce8d39;
+}
+.messages-list .chat-time span:nth-child(1){
+    flex-grow:2;
+     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

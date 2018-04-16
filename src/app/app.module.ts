@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { WindowComponent } from './window/window.component';
-import { MenuComponent } from './menu/menu.component';
+
 // tslint:disable-next-line:max-line-length
 import {
   MatAutocompleteModule,
@@ -48,9 +47,12 @@ import {
 
 import { FormsModule } from '@angular/forms';
 
-import { NgxEchartsModule } from 'ngx-echarts';
+// import { NgxEchartsModule } from 'ngx-echarts';
+import { MenuComponent } from './menu/menu.component';
+import { WindowComponent } from './window/window.component';
 import { CompanyNewsComponent } from './company-news/company-news.component';
-
+import {MessageWindowComponent} from './message-window/message-window.component'
+import { MessagesComponent} from './messages/messages.component'
 const appRoutes: Routes = [
   { path: 'window', component: WindowComponent },
   // { path: 'message/:id', component: MessageComponent },
@@ -74,7 +76,9 @@ const appRoutes: Routes = [
     AppComponent,
     WindowComponent,
     MenuComponent,
-    CompanyNewsComponent
+    CompanyNewsComponent,
+    MessageWindowComponent,
+    MessagesComponent
   ],
   exports: [
     MatAutocompleteModule,
@@ -130,7 +134,7 @@ const appRoutes: Routes = [
     MatDatepickerModule,
     FormsModule,
     MatGridListModule,
-    NgxEchartsModule,
+    // NgxEchartsModule,
     MatMenuModule,
     RouterModule.forRoot(
       appRoutes,
