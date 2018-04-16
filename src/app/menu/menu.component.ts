@@ -103,7 +103,6 @@ export class MenuComponent implements OnInit {
         },
     ]
     constructor() { }
-    @Input() height: string;
     ngOnInit() {
     }
 }

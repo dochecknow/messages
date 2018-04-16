@@ -1,4 +1,5 @@
 .window-left{
    
     background-color: #5c5c5c;
+    overflow-y: auto;
 }

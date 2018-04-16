@@ -9,7 +9,6 @@ import { Component, OnInit, Output, Input } from '@angular/core';
 
 export class CompanyNewsComponent implements OnInit {
     constructor() { }
-    @Input() height: string;
     ngOnInit() {
     }
 }
