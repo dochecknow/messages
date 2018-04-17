@@ -1,0 +1,85 @@
+<div class='op55'>
+  <div>
+    <div>
+      <label for="">sale name
+        <input type="text" name="" id="">
+      </label>
+      <label for="">type of sale
+        <input type="text" name="" id="">
+      </label>
+      <label class='label' for="">who are you selling to?
+        <div>
+          <input type="text" name="" id="">
+        </div>
+      </label>
+      <label class='label' for="">what are you selling ?
+        <div>
+          <span>
+            A
+          </span>
+          <input type="text" name="" id="">
+        </div>
+      </label>
+      <label class='label' for=""> &nbsp;
+        <div>
+          <span>
+            B
+          </span>
+          <input type="text" name="" id="">
+        </div>
+      </label>
+      <label class='label' for=""> &nbsp;
+        <div>
+          <span>
+            C
+          </span>
+          <input type="text" name="" id="">
+        </div>
+      </label>
+    </div>
+  </div>
+  <div>
+    <div class="offer-right">
+      <div>
+        <span>ETD</span>
+        <mat-form-field class="example-full-width">
+          <input matInput [matDatepicker]="picker" placeholder='DD/MM/YYYY'>
+          <mat-datepicker-toggle matSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <span>ETA</span>
+        <mat-form-field class="example-full-width">
+          <input matInput [matDatepicker]="picker2" placeholder='DD/MM/YYYY'>
+          <mat-datepicker-toggle matSuffix [for]="picker2">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <label class='label' for="">Shipping Terms
+        <div>
+          <input type="text" name="" id="">
+        </div>
+      </label>
+      <label class='label' for="">Sales Terms
+        <div>
+          <input type="text" name="" id="">
+        </div>
+      </label>
+      <label class='label' for="">Other Comments
+        <div>
+          <input type="text" name="" id="">
+        </div>
+      </label>
+      <div class="btn">
+        <button mat-raised-button color='warn' style="background-color:#cd8d45">
+          SEND
+          <!-- <mat-icon>send_black</mat-icon> -->
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
