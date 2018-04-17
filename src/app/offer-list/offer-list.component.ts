@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'offers-messages-component',
-    templateUrl: './offers-message.component.html',
-    styleUrls: ['./offers-message.component.css']
+    selector: 'offer-list-component',
+    templateUrl: './offer-list.component.html',
+    styleUrls: ['./offer-list.component.css']
 })
-export class OffersMessageComponent implements OnInit {
+export class OfferListComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
     constructor() { }
     ngOnInit() {
