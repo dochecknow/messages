@@ -55,9 +55,11 @@ import {MessageWindowComponent} from './message-window/message-window.component'
 import { MessagesComponent } from './messages/messages.component'
 import { MessageComponent} from './message/message.component'
 import { OffersMessageComponent} from './offers-message/offers-message.component'
+import { OffersSentComponent} from './offers-sent/offers-sent.component'
+import { WindowBuyComponent} from './window-buy/window-buy.component'
 const appRoutes: Routes = [
   { path: 'window/message', component: MessageWindowComponent },
-  // { path: 'buy/offers', component: OffersMessageComponent },
+  { path: 'buy/offers', component: WindowBuyComponent },
   // { path: 'newGroupStep1', component: NewGroupStep1Component },
   // { path: 'newGroupStep1/:id', component: NewGroupStep1Component },
   // { path: 'newGroupStep2/:id', component: NewGroupStep2Component },
@@ -81,7 +83,10 @@ const appRoutes: Routes = [
     CompanyNewsComponent,
     MessageWindowComponent,
     MessagesComponent,
-    MessageComponent
+    MessageComponent,
+    WindowBuyComponent,
+    OffersMessageComponent,
+    OffersSentComponent,
   ],
   exports: [
     MatAutocompleteModule,

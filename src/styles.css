@@ -44,3 +44,8 @@ display: block
     border-radius: 0;
     background:white;
 }
+
+/* BUY   右侧布局 top */
+.window-buy-right.mat-grid-tile .mat-figure{
+    align-items:flex-start
+}
