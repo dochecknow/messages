@@ -55,7 +55,7 @@ import {MessageWindowComponent} from './message-window/message-window.component'
 import { MessagesComponent} from './messages/messages.component'
 import { MessageComponent} from './message/message.component'
 const appRoutes: Routes = [
-  { path: 'window/message', component: WindowComponent },
+  { path: 'window/message', component: MessageWindowComponent },
   // { path: 'message/:id', component: MessageComponent },
   // { path: 'newGroupStep1', component: NewGroupStep1Component },
   // { path: 'newGroupStep1/:id', component: NewGroupStep1Component },

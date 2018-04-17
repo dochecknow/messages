@@ -1,11 +1,15 @@
 .message-box{
-
+    display: flex;
+    flex-direction: column;
     background: #e0e1d1;
     
 }
+.chat-list{
+    flex-grow: 2;
+}
 .message-box .input-chat{
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
 }
 .input-chat .message-input{
