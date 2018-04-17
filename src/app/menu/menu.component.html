@@ -23,7 +23,9 @@
             </mat-expansion-panel-header>
             <div id="nav-children" class="nav-children">
                 <button mat-button *ngFor="let chl of item.children">
-                    {{chl.title}}
+                    <a routerLink="window/message" routerLinkActive="active">
+                        {{chl.title}}
+                    </a>
                 </button>
 
             </div>

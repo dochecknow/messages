@@ -17,7 +17,8 @@
 .mat-expansion-panel-header-title span{
     text-indent:0.5em
 }
-.nav-children button{
+.nav-children button {
+    /* display: block; */
     width: 100%;
     display: block;
     line-height: 2.5em;
@@ -27,6 +28,10 @@
     padding:0 24px;
     color:#5c5c5c;
     background: #ffffff;
+}
+.nav-children button a{
+    color:#5c5c5c;
+    text-decoration: none;
 }
 .menu{
     width: 100%;
