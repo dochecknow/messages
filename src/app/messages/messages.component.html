@@ -7,7 +7,7 @@
         <mat-icon class="search-ico two">ic_create</mat-icon>
     </div>
     <div class="messages-list scroll">
-        <button mat-button *ngFor="let item of data" (click)=onClick(item.id)>
+        <button mat-button *ngFor="let item of data" (click)='onClick(item.id)'>
             <img src='{{item.ico}}' alt="">
             <div class='chat'>
                 <p class='chat-name'>

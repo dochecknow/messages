@@ -1,6 +1,6 @@
 <div class="menu">
     <div class="logo">
-        <img src="https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs="
+        <img src="http://img2.imgtn.bdimg.com/it/u=3509004173,840437551&fm=27&gp=0.jpg"
             alt="">
         <div>
             <p>Welcome Charlie</p>
@@ -14,7 +14,6 @@
     </div>
     <mat-accordion>
         <mat-expansion-panel *ngFor="let item of data">
-
             <mat-expansion-panel-header class="nav">
                 <mat-panel-title>
                     <mat-icon>account_circle</mat-icon>
@@ -22,12 +21,11 @@
                 </mat-panel-title>
             </mat-expansion-panel-header>
             <div id="nav-children" class="nav-children">
-                <button mat-button *ngFor="let chl of item.children">
-                    <a routerLink="window/message" routerLinkActive="active">
+                <a *ngFor="let chl of item.children" routerLink="{{chl.url}}" routerLinkActive="active">
+                <button mat-button >
                         {{chl.title}}
-                    </a>
-                </button>
-
+                    </button>
+                </a>
             </div>
         </mat-expansion-panel>
     </mat-accordion>

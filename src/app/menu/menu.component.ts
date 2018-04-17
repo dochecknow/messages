@@ -17,6 +17,7 @@ export class MenuComponent implements OnInit {
                 {
                     title: 'Offers sent',
                     id:'988',
+                    url:'window/buy'
                 },
                 {
                     title: 'Tenders',
@@ -61,8 +62,9 @@ export class MenuComponent implements OnInit {
             id:'2',
             children:[
                 {
-                    title: 'Offers sent',
+                    title: 'Message',
                     id:'9838',
+                    url:'window/message'
                 },
                 {
                     title: 'Tenders',

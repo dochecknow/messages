@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'offer-list-component',
@@ -7,47 +7,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfferListComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
-    constructor() { }
-    ngOnInit() {
-    }
-    data=[
+    data = [
         {
-            name:'Ricky Bobby',
-            ico:'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
-            title:'headpic .lrts .me/chens ongwus heng?ima geMogr',
-            time:'12:20',
-            id:'adsx'
+            name: 'Product one',
+            ico: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=623176393,1134115137&fm=27&gp=0.jpg',
+            title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
+            time: '12:20',
+            id: 'adsx'
         },
         {
-            name:'Ricky Bobby',
-            ico: 'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
-            title:'headpic .lrts .me/chens ongwus heng?ima geMogr',
-            time:'12:20',
-            id:'adsx1'
-        }
-        ,
-        {
-            name: 'Ricky Bobby',
-            ico: 'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
+            name: 'Product two',
+            ico: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523965718617&di=2795ca898cbb830b7c7fc39af4da728c&imgtype=0&src=http%3A%2F%2Fimages.91160.com%2Fnews%2Fother%2F201506%2F2015061514094142301.jpg',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
             id: 'adsx1'
         }
         ,
         {
-            name: 'Ricky Bobby',
-            ico: 'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
+            name: 'Product three',
+            ico: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=374591928,3773095675&fm=27&gp=0.jpg',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
             id: 'adsx1'
         }
         ,
         {
-            name: 'Ricky Bobby',
-            ico: 'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
+            name: 'Product four',
+            ico: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2949362197,3435165921&fm=27&gp=0.jpg',
+            title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
+            time: '12:20',
+            id: 'adsx1'
+        }
+        ,
+        {
+            name: 'Product Five',
+            ico: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3147607667,1397215923&fm=27&gp=0.jpg',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
             id: 'adsx1'
         }
     ]
+    @Output() onItemClick = new EventEmitter<string>();
+    onClick(itemID: string): void {
+        // this.onItemClick.emit(itemID);
+        console.log(itemID)
+    }
+    constructor() { }
+    ngOnInit() {
+    }
+
 }
