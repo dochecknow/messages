@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
     selector: 'messages-component',
@@ -10,20 +11,24 @@ export class MessagesComponent implements OnInit {
     constructor() { }
     ngOnInit() {
     }
-    data=[
+    @Output() onItemClick = new EventEmitter<string>();
+    onClick(itemID: string): void {
+        this.onItemClick.emit(itemID);
+    }
+    data = [
         {
-            name:'Ricky Bobby',
-            ico:'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
-            title:'headpic .lrts .me/chens ongwus heng?ima geMogr',
-            time:'12:20',
-            id:'adsx'
+            name: 'Ricky Bobby',
+            ico: 'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
+            title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
+            time: '12:20',
+            id: 'test1'
         },
         {
-            name:'Ricky Bobby',
+            name: 'Ricky Bobby',
             ico: 'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
-            title:'headpic .lrts .me/chens ongwus heng?ima geMogr',
-            time:'12:20',
-            id:'adsx1'
+            title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
+            time: '12:20',
+            id: 'test2'
         }
         ,
         {
@@ -31,7 +36,7 @@ export class MessagesComponent implements OnInit {
             ico: 'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
-            id: 'adsx1'
+            id: 'test3'
         }
         ,
         {
@@ -39,7 +44,7 @@ export class MessagesComponent implements OnInit {
             ico: 'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
-            id: 'adsx1'
+            id: 'test4'
         }
         ,
         {
@@ -47,7 +52,7 @@ export class MessagesComponent implements OnInit {
             ico: 'https://headpic.lrts.me/chensongwusheng?imageMogr/v2/auto-orient/thumbnail/180x180&e=1524636000&token=OOHK9_MIwdSJxAHYi5os2taDVS13CVvcEa1cZDb9:2UpXh1Et6v-S0_j0eU7X-1iitLs=',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
-            id: 'adsx1'
+            id: 'test5'
         }
     ]
 }

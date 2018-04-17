@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageWindowComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
-
+    SelectedID: string;
+    onItemClick(itemID: string): void {
+        this.SelectedID = itemID;
+    }
     constructor() { }
     ngOnInit() {
     }
