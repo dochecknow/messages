@@ -7,6 +7,10 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 })
 export class WindowBuyComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
+    SelectedID: string;
+    onItemClick(itemID: string): void {
+        this.SelectedID = itemID;
+    }
     constructor() { }
     ngOnInit() {
     }

@@ -7,6 +7,21 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 })
 export class MessageComponent implements OnChanges, OnInit {
     list: any;
+   
+    ngOnInit(): void {
+        this.getDataFromService();
+    }
+    ngOnChanges(changes: SimpleChanges): void {
+        this.getDataFromService();
+        let detaildID = changes.detailID.currentValue;
+        let pre = changes.detailID.previousValue;
+        if (detaildID != null) {
+            this.list = this.list.filter(r => r.id == detaildID);
+        }
+    }
+    height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
+    @Input() detailID: string;
+    constructor() { }
     getDataFromService(): void {
         this.list = [
             {
@@ -60,20 +75,5 @@ export class MessageComponent implements OnChanges, OnInit {
             }
         ]
     }
-    ngOnInit(): void {
-        this.getDataFromService();
-    }
-    ngOnChanges(changes: SimpleChanges): void {
-        this.getDataFromService();
-        let detaildID = changes.DetailID.currentValue;
-        let pre = changes.DetailID.previousValue;
-        if (detaildID != null) {
-            this.list = this.list.filter(r => r.id == detaildID);
-        }
-    }
-    height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
-    @Input() DetailID: string;
-    constructor() { }
-
 
 }

@@ -7,20 +7,28 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class OfferListComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
+
+    @Output() onItemClick = new EventEmitter<string>();
+    onClick(itemID: string): void {
+        this.onItemClick.emit(itemID);
+    }
+    constructor() { }
+    ngOnInit() {
+    }
     data = [
         {
             name: 'Product one',
             ico: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=623176393,1134115137&fm=27&gp=0.jpg',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
-            id: 'adsx'
+            id: 'test1'
         },
         {
             name: 'Product two',
             ico: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523965718617&di=2795ca898cbb830b7c7fc39af4da728c&imgtype=0&src=http%3A%2F%2Fimages.91160.com%2Fnews%2Fother%2F201506%2F2015061514094142301.jpg',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
-            id: 'adsx1'
+            id: 'test2'
         }
         ,
         {
@@ -28,7 +36,7 @@ export class OfferListComponent implements OnInit {
             ico: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=374591928,3773095675&fm=27&gp=0.jpg',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
-            id: 'adsx1'
+            id: 'test3'
         }
         ,
         {
@@ -36,7 +44,7 @@ export class OfferListComponent implements OnInit {
             ico: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2949362197,3435165921&fm=27&gp=0.jpg',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
-            id: 'adsx1'
+            id: 'test4'
         }
         ,
         {
@@ -44,16 +52,7 @@ export class OfferListComponent implements OnInit {
             ico: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3147607667,1397215923&fm=27&gp=0.jpg',
             title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
             time: '12:20',
-            id: 'adsx1'
+            id: 'test5'
         }
     ]
-    @Output() onItemClick = new EventEmitter<string>();
-    onClick(itemID: string): void {
-        // this.onItemClick.emit(itemID);
-        console.log(itemID)
-    }
-    constructor() { }
-    ngOnInit() {
-    }
-
 }

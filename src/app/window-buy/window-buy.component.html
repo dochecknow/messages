@@ -2,12 +2,12 @@
     <mat-grid-list cols="24" rowHeight={{height}}>
         <mat-grid-tile [colspan]='7' class="message-window-left">
             <div style='width:100%;'>
-                <offer-list-component></offer-list-component>
+                <offer-list-component (onItemClick)=onItemClick($event)></offer-list-component>
             </div>
         </mat-grid-tile>
         <mat-grid-tile [colspan]='17' class="window-buy-right">
             <div style='width:100%;'>
-                <offers-sent></offers-sent>
+                <offers-sent [detailID]="SelectedID"></offers-sent>
             </div>
         </mat-grid-tile>
     </mat-grid-list>
