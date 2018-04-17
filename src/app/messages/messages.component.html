@@ -1,13 +1,13 @@
 <div class="messages" [style.height]='height'>
     <div class="search">
-            <mat-icon class="search-ico">ic_search</mat-icon>
-            <mat-form-field class="center">
-                <input matInput placeholder="Search">
-            </mat-form-field>
-            <mat-icon class="search-ico two">ic_create</mat-icon>
+        <mat-icon class="search-ico">ic_search</mat-icon>
+        <mat-form-field class="center">
+            <input matInput placeholder="Search">
+        </mat-form-field>
+        <mat-icon class="search-ico two">ic_create</mat-icon>
     </div>
     <div class="messages-list scroll">
-        <button mat-button *ngFor="let item of data">
+        <button mat-button *ngFor="let item of data" (click)=onClick(item.id)>
             <img src='{{item.ico}}' alt="">
             <div class='chat'>
                 <p class='chat-name'>
