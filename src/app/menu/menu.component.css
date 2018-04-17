@@ -36,5 +36,32 @@
 .nav-children button.active, button.cdk-focused{
     background: #ce8d39!important;
     color:white!important;
-    
+}
+.logo {
+    display: flex;
+    padding: 1em;
+}
+.logo img{
+    width: 5.5em;
+    height: 5.5em;
+    border-radius: 50%;
+}
+.logo div{
+    flex-grow: 2;
+}
+.logo div p{
+    padding:1em 0 0.5em 0;
+    color:#ce8d39 ;
+    margin-left: 1em;
+    font-size: 20px;
+    font-weight: 600;
+}
+.logo div a{
+    color:white ;
+    margin-left: 1em;
+    font-size: 16px;
+    text-decoration: none;
+}
+.input{
+    text-indent: -72px;
 }
