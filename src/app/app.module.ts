@@ -52,11 +52,12 @@ import { MenuComponent } from './menu/menu.component';
 import { WindowComponent } from './window/window.component';
 import { CompanyNewsComponent } from './company-news/company-news.component';
 import {MessageWindowComponent} from './message-window/message-window.component'
-import { MessagesComponent} from './messages/messages.component'
+import { MessagesComponent } from './messages/messages.component'
 import { MessageComponent} from './message/message.component'
+import { OffersMessageComponent} from './offers-message/offers-message.component'
 const appRoutes: Routes = [
   { path: 'window/message', component: MessageWindowComponent },
-  // { path: 'message/:id', component: MessageComponent },
+  // { path: 'buy/offers', component: OffersMessageComponent },
   // { path: 'newGroupStep1', component: NewGroupStep1Component },
   // { path: 'newGroupStep1/:id', component: NewGroupStep1Component },
   // { path: 'newGroupStep2/:id', component: NewGroupStep2Component },
