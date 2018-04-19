@@ -1,11 +1,11 @@
 <div class="message-window">
-    <mat-grid-list cols="24" rowHeight={{height}}>
-        <mat-grid-tile [colspan]='7' class="message-window-left">
+    <mat-grid-list cols="100" rowHeight={{height}}>
+        <mat-grid-tile [colspan]='35' class="message-window-left">
             <div style='width:100%;'>
                 <offer-list-component (onItemClick)=onItemClick($event)></offer-list-component>
             </div>
         </mat-grid-tile>
-        <mat-grid-tile [colspan]='17' class="window-buy-right">
+        <mat-grid-tile [colspan]='65' class="window-buy-right">
             <div style='width:100%;'>
                 <offers-sent [detailID]="SelectedID"></offers-sent>
             </div>

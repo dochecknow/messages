@@ -1,7 +1,7 @@
 .message-box{
     display: flex;
     flex-direction: column;
-    background: #e0e1d1;
+    background: #e6e1d7
     
 }
 .chat-list{

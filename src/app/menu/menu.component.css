@@ -10,7 +10,7 @@
     padding: 1em 24px
 }
 .news b{
-    color:#ce8d39;
+    color:#cd8d45;
     font-size: 1.3em
 }
 
@@ -39,7 +39,7 @@
 }
 
 .nav-children button.active, button.cdk-focused{
-    background: #ce8d39!important;
+    background: #cd8d45!important;
     color:white!important;
 }
 .logo {
@@ -56,7 +56,7 @@
 }
 .logo div p{
     padding:1em 0 0.5em 0;
-    color:#ce8d39 ;
+    color:#cd8d45 ;
     margin-left: 1em;
     font-size: 20px;
     font-weight: 600;

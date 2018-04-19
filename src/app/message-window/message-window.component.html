@@ -1,11 +1,11 @@
 <div class="message-window">
-    <mat-grid-list cols="24" rowHeight={{height}}>
-        <mat-grid-tile [colspan]='8' class="message-window-left">
+    <mat-grid-list cols="100" rowHeight={{height}}>
+        <mat-grid-tile [colspan]='35' class="message-window-left">
             <div style='width:100%;'>
                 <messages-component (onItemClick) = "onItemClick($event)"></messages-component>
             </div>
         </mat-grid-tile>
-        <mat-grid-tile [colspan]='16' class="message-window-right">
+        <mat-grid-tile [colspan]='65' class="message-window-right">
             <div style='width:100%;'>
                 <message-component [detailID]="SelectedID"></message-component>
             </div>

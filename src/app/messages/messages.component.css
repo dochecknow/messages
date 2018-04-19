@@ -40,6 +40,7 @@
 .messages-list{
     /* padding-top:85px; */
     flex-grow:2;
+    
 }
 .messages-list .chat{
     flex-grow:2;

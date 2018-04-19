@@ -35,7 +35,7 @@ display: block
     height: 4px;
 }
 *::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-    border-radius: 5px;
+    /* border-radius: 5px; */
     -webkit-box-shadow: inset 0 0 5px#cc8a4d;
     background:#cc8a4d;
 }
@@ -48,4 +48,12 @@ display: block
 /* BUY   右侧布局 top */
 .window-buy-right.mat-grid-tile .mat-figure{
     align-items:flex-start
+}
+
+/* 第二列 点击样式 */
+button.btn-active {
+    background: #cfcac1 !important;
+}
+.messages{
+    background: #f6f5f3!important;
 }

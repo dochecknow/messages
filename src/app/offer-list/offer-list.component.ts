@@ -7,9 +7,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class OfferListComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
-
+    id=''
     @Output() onItemClick = new EventEmitter<string>();
     onClick(itemID: string): void {
+        this.id = itemID
         this.onItemClick.emit(itemID);
     }
     constructor() { }
