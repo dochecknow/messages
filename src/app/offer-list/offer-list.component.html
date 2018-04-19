@@ -1,24 +1,39 @@
-<div class="messages" [style.height]='height'>
-    <div class="search">
-            <mat-icon class="search-ico">ic_search</mat-icon>
-            <mat-form-field class="center">
-                <input matInput placeholder="Search">
-            </mat-form-field>
-            <mat-icon class="search-ico two">ic_add</mat-icon>
-    </div>
-    <div class="messages-list scroll">
-        <button mat-button *ngFor="let item of data"  (click)='onClick(item.id)'>
-            <img src='{{item.ico}}' alt="">
-            <div class='chat'>
-                <p class='chat-name'>
-                    <b>{{item.name}} <span class="chat-time">{{item.time}}</span></b>
-                </p>
-                <!-- <p class='chat-time'>
-                    <span>{{item.title}}</span>
-                    <span>{{item.time}}</span>
-                </p> -->
-            </div>
-        </button>
 
-    </div>
+<div class="message-window">
+    <mat-grid-list cols="24" rowHeight={{height}}>
+        <mat-grid-tile [colspan]='7' class="message-window-left">
+            <div style='width:100%;'>
+                <div class="messages" [style.height]='height'>
+                    <div class="search">
+                            <mat-icon class="search-ico">ic_search</mat-icon>
+                            <mat-form-field class="center">
+                                <input matInput placeholder="Search">
+                            </mat-form-field>
+                            <mat-icon class="search-ico two">ic_add</mat-icon>
+                    </div>
+                    <div class="messages-list scroll">
+                        <button mat-button *ngFor="let item of data"  (click)='onClick(item.id)'>
+                            <img src='{{item.ico}}' alt="">
+                            <div class='chat'>
+                                <p class='chat-name'>
+                                    <b>{{item.name}} <span class="chat-time">{{item.time}}</span></b>
+                                </p>
+                                <!-- <p class='chat-time'>
+                                    <span>{{item.title}}</span>
+                                    <span>{{item.time}}</span>
+                                </p> -->
+                            </div>
+                        </button>
+                
+                    </div>
+                </div>
+                
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]='17' class="window-buy-right">
+            <div style='width:100%;'>
+                <offers-sent [detailData]="obs$"></offers-sent>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
     selector: 'offer-list-component',
@@ -7,13 +8,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class OfferListComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
-
-    @Output() onItemClick = new EventEmitter<string>();
-    onClick(itemID: string): void {
-        this.onItemClick.emit(itemID);
-    }
     constructor() { }
     ngOnInit() {
+    }
+    public obs$ = new Subject<any>();
+    onClick(itemID: string): void {
+        this.obs$.next(this.data.filter(r => r.id == itemID));
     }
     data = [
         {

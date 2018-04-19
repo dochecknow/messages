@@ -1,11 +1,12 @@
 <div class='op55'>
   <div>
     <div>
+      
       <label for="">sale name
-        <input type="text" name="" id="" value="{{model.id}}">
+        <input type="text" name="" id="" value="{{(detailData | async)[0]?.name}}">
       </label>
       <label for="">type of sale
-        <input type="text" name="" id="" value="{{model.id}}">
+        <input type="text" name="" id="" value="">
       </label>
       <label class='label' for="">who are you selling to?
         <div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Subscriber } from 'rxjs/Subscriber';
 
 @Component({
     selector: 'message-window-component',
@@ -7,10 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageWindowComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
-    SelectedID: string;
-    onItemClick(itemID: string): void {
-        this.SelectedID = itemID;
-    }
+    SelectedData = new Subscriber<Array<any>>();
     constructor() { }
     ngOnInit() {
     }
