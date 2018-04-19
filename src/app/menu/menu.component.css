@@ -21,13 +21,16 @@
     /* display: block; */
     width: 100%;
     display: block;
-    line-height: 2.5em;
+    line-height: 3.058em;
     border-bottom: 1px solid #717171;
     font-size: 1.5em;
     text-align:left;
     padding:0 24px;
     color:#5c5c5c;
     background: #ffffff;
+}
+.mat-expansion-panel-spacing {
+    margin: 0 !important;
 }
 .nav-children a{
     color:#5c5c5c;
@@ -44,11 +47,12 @@
 }
 .logo {
     display: flex;
-    padding: 1em;
+    /* height: 8.717em; */
+    padding: 1.3485em 1.6em;
 }
 .logo img{
-    width: 5.5em;
-    height: 5.5em;
+    width: 6.02em;
+    height:6.02em;
     border-radius: 50%;
 }
 .logo div{
