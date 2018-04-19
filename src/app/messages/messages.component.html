@@ -12,7 +12,7 @@
                         <mat-icon class="search-ico two">ic_create</mat-icon>
                     </div>
                     <div class="messages-list scroll">
-                        <button mat-button *ngFor="let item of data" (click)='onClick(item.id)'>
+                        <button mat-button *ngFor="let item of data" (click)='onClick(item.id)' class="{{item.id===id?'btn-active mat-button ng-star-inserted cdk-focused sdk-mouse-focused':'mat-button ng-star-inserted'}}">
                             <img src='{{item.ico}}' alt="">
                             <div class='chat'>
                                 <p class='chat-name'>
