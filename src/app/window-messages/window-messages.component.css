@@ -24,7 +24,6 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background: #e0e1d1;
 }
 .search{
     display: flex;
@@ -41,6 +40,7 @@
 .messages-list{
     /* padding-top:85px; */
     flex-grow:2;
+    
 }
 .messages-list .chat{
     flex-grow:2;
@@ -64,19 +64,16 @@
 }
 .messages-list .chat-name{
     font-size:18px; 
-    line-height: 68px;
-}
-.messages-list b{
-    display: flex;
-    justify-content: space-between;
 }
 .messages-list .chat-time{
+    display: flex;
+    line-height: 32px;
     color: #ce8d39;
-    font-size: 14px;
 }
-/* .messages-list .chat-time span:nth-child(1){
+.messages-list .chat-time span:nth-child(1){
     flex-grow:2;
      overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-} */
+    width: 90%;
+}

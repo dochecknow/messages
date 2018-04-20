@@ -2,11 +2,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 
 @Component({
-    selector: 'offer-list-component',
-    templateUrl: './offer-list.component.html',
-    styleUrls: ['./offer-list.component.css']
+    selector: 'window-sell',
+    templateUrl: './window-sell.component.html',
+    styleUrls: ['./window-sell.component.css']
 })
-export class OfferListComponent implements OnInit {
+export class WindowSellComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
     constructor() { }
     ngOnInit() {

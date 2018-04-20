@@ -51,15 +51,18 @@ import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { WindowComponent } from './window/window.component';
 import { CompanyNewsComponent } from './company-news/company-news.component';
-import { MessageWindowComponent } from './message-window/message-window.component'
-import { MessagesComponent } from './messages/messages.component'
+import { MessagesWindowComponent } from './window-messages/window-messages.component'
 import { MessageComponent } from './message/message.component'
-import { OfferListComponent } from './offer-list/offer-list.component'
 import { OffersSentComponent } from './offers-sent/offers-sent.component'
 import { WindowBuyComponent } from './window-buy/window-buy.component'
+import { CustomerComponent } from './customer/customer.component';
+import { CustomersWindowComponent } from './window-customers/window-customers.component';
+import { WindowSellComponent } from './window-sell/window-sell.component';
 const appRoutes: Routes = [
-  { path: 'window/message', component: MessageWindowComponent },
+  { path: 'window/messages', component: MessagesWindowComponent },
   { path: 'window/buy', component: WindowBuyComponent },
+  { path: 'window/customers', component: CustomersWindowComponent },
+  { path: 'window/sell', component: WindowSellComponent },
   // { path: 'newGroupStep1', component: NewGroupStep1Component },
   // { path: 'newGroupStep1/:id', component: NewGroupStep1Component },
   // { path: 'newGroupStep2/:id', component: NewGroupStep2Component },
@@ -81,12 +84,13 @@ const appRoutes: Routes = [
     WindowComponent,
     MenuComponent,
     CompanyNewsComponent,
-    MessageWindowComponent,
-    MessagesComponent,
+    MessagesWindowComponent,
     MessageComponent,
     WindowBuyComponent,
-    OfferListComponent,
     OffersSentComponent,
+    CustomerComponent,
+    CustomersWindowComponent,
+    WindowSellComponent
   ],
   exports: [
     MatAutocompleteModule,

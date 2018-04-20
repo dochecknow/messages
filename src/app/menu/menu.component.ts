@@ -1,7 +1,7 @@
-import { Component, OnInit,Output, Input } from '@angular/core';
+import { Component, OnInit, Output, Input } from '@angular/core';
 
 @Component({
-    selector: 'menu-component',
+    selector: 'menu',
     templateUrl: './menu.component.html',
     styleUrls: ['./menu.component.css']
 })
@@ -10,96 +10,97 @@ import { Component, OnInit,Output, Input } from '@angular/core';
 export class MenuComponent implements OnInit {
     data = [
         {
-            title:'Buy',
-            ico:'aa',
-            id:'1',
-            children:[
+            title: 'Buy',
+            ico: 'aa',
+            id: '1',
+            children: [
                 {
                     title: 'Offers sent',
-                    id:'988',
-                    url:'window/buy'
+                    id: '988',
+                    url: 'window/buy'
                 },
                 {
                     title: 'Tenders',
-                    id:'982',
+                    id: '982',
                 },
                 {
                     title: 'Bids',
-                    id:'9883',
+                    id: '9883',
                 },
                 {
                     title: 'Info',
-                    id:'98834',
+                    id: '98834',
                 },
             ]
         },
         {
-            title:'Sell',
-            ico:'aa',
-            id:'2',
-            children:[
+            title: 'Sell',
+            ico: 'aa',
+            id: '2',
+            children: [
                 {
-                    title: 'Offers sent',
-                    id:'9838',
+                    title: 'Messages',
+                    id: '9838',
+                    url: 'window/sell'
                 },
                 {
                     title: 'Tenders',
-                    id:'9842',
+                    id: '9842',
                 },
                 {
                     title: 'Bids',
-                    id:'94883',
+                    id: '94883',
                 },
                 {
                     title: 'Info',
-                    id:'984834',
+                    id: '984834',
                 },
             ]
         },
         {
-            title:'Messages',
-            ico:'aa',
-            id:'2',
-            children:[
+            title: 'Messages',
+            ico: 'aa',
+            id: '2',
+            children: [
                 {
-                    title: 'Message',
-                    id:'9838',
-                    url:'window/message'
+                    title: 'Messages',
+                    id: '9838',
+                    url: 'window/messages'
                 },
                 {
                     title: 'Tenders',
-                    id:'9842',
+                    id: '9842',
                 },
                 {
                     title: 'Bids',
-                    id:'94883',
+                    id: '94883',
                 },
                 {
                     title: 'Info',
-                    id:'984834',
+                    id: '984834',
                 },
             ]
         },
         {
-            title:'Share Ticket',
-            ico:'aa',
-            id:'2',
-            children:[
+            title: 'Share Ticket',
+            ico: 'aa',
+            id: '2',
+            children: [
                 {
                     title: 'Offers sent',
-                    id:'9838',
+                    id: '9838',
                 },
                 {
                     title: 'Tenders',
-                    id:'9842',
+                    id: '9842',
                 },
                 {
                     title: 'Bids',
-                    id:'94883',
+                    id: '94883',
                 },
                 {
                     title: 'Info',
-                    id:'984834',
+                    id: '984834',
                 },
             ]
         },

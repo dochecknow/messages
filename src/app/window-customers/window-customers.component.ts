@@ -4,11 +4,11 @@ import { Subject } from 'rxjs/Subject';
 
 
 @Component({
-    selector: 'messages-component',
-    templateUrl: './messages.component.html',
-    styleUrls: ['./messages.component.css']
+    selector: 'window-customers',
+    templateUrl: './window-customers.component.html',
+    styleUrls: ['./window-customers.component.css']
 })
-export class MessagesComponent implements OnInit {
+export class CustomersWindowComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
     constructor() { }
 

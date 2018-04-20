@@ -2,11 +2,11 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-    selector: 'message',
-    templateUrl: './message.component.html',
-    styleUrls: ['./message.component.css']
+    selector: 'customer',
+    templateUrl: './customer.component.html',
+    styleUrls: ['./customer.component.css']
 })
-export class MessageComponent implements OnInit {
+export class CustomerComponent implements OnInit {
 
     ngOnInit(): void {
 
