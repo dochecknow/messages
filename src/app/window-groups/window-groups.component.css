@@ -77,3 +77,43 @@
     text-overflow: ellipsis;
     width: 90%;
 }
+
+
+
+.step{
+    padding: 15px;
+}
+.step1{
+    display:flex;
+    justify-content:space-between;
+    padding:0 0 8px 0;
+}
+.step1 .mat-list-text{
+    padding-left:0
+}
+.step1-list{
+    display:flex;
+    align-items:center;
+    /* padding:0 -16px; */
+}
+.step1-list img{
+    width:40px;
+    height:40px;
+    border-radius: 5px;
+}
+
+.step1-list div{
+    margin-left:8px
+}
+.step1-list-show{
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.step1-list{
+    /* border-bottom: 1px solid rgba(0,0,0,.42); */
+}
+.step1 button a
+{
+    display: block;
+    width: 100%;
+}

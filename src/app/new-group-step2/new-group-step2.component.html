@@ -1,0 +1,29 @@
+<div class="step">
+  <div class="step2">
+    <button mat-raised-button (click)="onBackClick()">
+      BACK
+    </button>
+    <button mat-raised-button color="primary" (click)="createGroup()">
+      CREAT
+    </button>
+  </div>
+  <div class="add-input">
+    <mat-form-field class="serch-width">
+      <input matInput required [(ngModel)]="groupName" placeholder="NAME CVARE">
+    </mat-form-field>
+  </div>
+</div>
+<div id='chats-list'>
+  <mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let user of userlist | async">
+      <button mat-button (click)="openDialog(user)">
+        <img src="{{user.imagepath}}">
+        <div class='user-chat'>
+          <span>
+            {{user.name}}
+          </span>
+        </div>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</div>

@@ -1,7 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Component, OnInit, ViewChild } from '@angular/core';
+// import { UserService } from '../services/user.service';
+import { MatSelectionList } from '@angular/material';
+import { forEach } from '@angular/router/src/utils/collection';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { Subject } from 'rxjs/Subject';
-
 
 @Component({
     selector: 'window-groups',
@@ -10,62 +12,43 @@ import { Subject } from 'rxjs/Subject';
 })
 export class GroupsWindowComponent implements OnInit {
     height = (window.innerHeight || document.body.clientHeight || document.documentElement.clientHeight) + 'px';
-    constructor() { }
+    @ViewChild(MatSelectionList)
+    private userSelectionList: MatSelectionList;
 
+    _users = [
+
+        { id: '1', name: 'MyGroup1', imagepath: 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1', LatestMessageUser: 'Kevin', LatestMessage: 'I find a very interest thing', LatestMessageDate: '02/08/2018', members: ['Kevin1', 'Mike'] },
+        { id: '2', name: 'MyGroup2', imagepath: 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1', LatestMessageUser: '', LatestMessage: '', LatestMessageDate: '', members: ['Kevin2', 'Mike'] },
+
+        { id: '3', name: 'MyGroup3', imagepath: 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1', LatestMessageUser: '', LatestMessage: '', LatestMessageDate: '', members: ['Kevin3', 'Mike'] },
+        { id: '4', name: 'MyGroup4', imagepath: 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1', LatestMessageUser: '', LatestMessage: '', LatestMessageDate: '', members: ['Kevin4', 'Mike'] },
+
+        { id: '5', name: 'MyGroup5', imagepath: 'https://i.stack.imgur.com/isckt.jpg?s=32&g=1', LatestMessageUser: '', LatestMessage: '', LatestMessageDate: '', members: ['Kevin5', 'Mike'] }
+    ];
+    users = []
+    _selectUserIDs = [];
+    public obs$ = new Subject<any>();
+    onNextClick(): void {
+        this._selectUserIDs = [];
+        for (const item of this.userSelectionList.selectedOptions.selected) {
+
+            this._selectUserIDs.push(...this._users.filter(
+                it => {
+                    return item.value == it.id
+                }
+            ));
+        }
+        this.obs$.next(this._selectUserIDs);
+    }
     ngOnInit() {
+        this.users = this._users;
     }
-    public obs$ = new Subject<any>();;
-    onClick(itemID: string): void {
-        this.obs$.next(this.data.filter(r => r.id == itemID));
+    serchChange(event) {
+        const searchValue = (<HTMLInputElement>event.target).value;
+        if (searchValue.length !== 0) {
+            this.users = this._users.filter(u => u.name.toLowerCase().indexOf(searchValue.toLowerCase()) > -1);
+        } else {
+            this.users = this._users;
+        }
     }
-    data = [
-        {
-            name: 'Ricky Bobby',
-            ico: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523969142524&di=9013b80be418b35f7ec85f3fd2a86d30&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D2a3698229d0a304e462fa8b9b9a1cdf3%2F241f95cad1c8a7861e3ea6286d09c93d70cf5084.jpg',
-            title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
-            time: '12:20',
-            id: 'test1',
-            use: 'me',
-            text: 'test text1'
-        },
-        {
-            name: 'Ricky Bobby',
-            ico: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523969142524&di=9013b80be418b35f7ec85f3fd2a86d30&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D2a3698229d0a304e462fa8b9b9a1cdf3%2F241f95cad1c8a7861e3ea6286d09c93d70cf5084.jpg',
-            title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
-            time: '12:20',
-            id: 'test1',
-            use: 'she',
-            text: 'test text2'
-        }
-        ,
-        {
-            name: 'Ricky Bobby',
-            ico: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523969142524&di=9013b80be418b35f7ec85f3fd2a86d30&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D2a3698229d0a304e462fa8b9b9a1cdf3%2F241f95cad1c8a7861e3ea6286d09c93d70cf5084.jpg',
-            title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
-            time: '12:20',
-            id: 'test3',
-            use: 'me',
-            text: 'test text3'
-        }
-        ,
-        {
-            name: 'Ricky Bobby',
-            ico: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523969142524&di=9013b80be418b35f7ec85f3fd2a86d30&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D2a3698229d0a304e462fa8b9b9a1cdf3%2F241f95cad1c8a7861e3ea6286d09c93d70cf5084.jpg',
-            title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
-            time: '12:20',
-            id: 'test4',
-            use: 'she',
-            text: 'test text4'
-        }
-        ,
-        {
-            name: 'Ricky Bobby',
-            ico: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523969142524&di=9013b80be418b35f7ec85f3fd2a86d30&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D2a3698229d0a304e462fa8b9b9a1cdf3%2F241f95cad1c8a7861e3ea6286d09c93d70cf5084.jpg',
-            title: 'headpic .lrts .me/chens ongwus heng?ima geMogr',
-            time: '12:20',
-            id: 'test5',
-            use: 'she',
-            text: 'test text5'
-        }
-    ]
 }

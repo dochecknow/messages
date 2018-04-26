@@ -14,7 +14,7 @@ export class MessagesWindowComponent implements OnInit {
 
     ngOnInit() {
     }
-    public obs$ = new Subject<any>();;
+    public obs$ = new Subject<any>();
     onClick(itemID: string): void {
         this.obs$.next(this.data.filter(r => r.id == itemID));
     }

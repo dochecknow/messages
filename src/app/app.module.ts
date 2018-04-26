@@ -58,11 +58,15 @@ import { WindowBuyComponent } from './window-buy/window-buy.component'
 import { CustomerComponent } from './customer/customer.component';
 import { CustomersWindowComponent } from './window-customers/window-customers.component';
 import { WindowSellComponent } from './window-sell/window-sell.component';
+import { GroupsWindowComponent } from './window-groups/window-groups.component';
+import { NewGroupStep1Component } from './new-group-step1/new-group-step1.component';
+import { NewGroupStep2Component } from './new-group-step2/new-group-step2.component';
 const appRoutes: Routes = [
   { path: 'window/messages', component: MessagesWindowComponent },
   { path: 'window/buy', component: WindowBuyComponent },
   { path: 'window/customers', component: CustomersWindowComponent },
   { path: 'window/sell', component: WindowSellComponent },
+  { path: 'window/groups', component: GroupsWindowComponent },
   // { path: 'newGroupStep1', component: NewGroupStep1Component },
   // { path: 'newGroupStep1/:id', component: NewGroupStep1Component },
   // { path: 'newGroupStep2/:id', component: NewGroupStep2Component },
@@ -90,7 +94,10 @@ const appRoutes: Routes = [
     OffersSentComponent,
     CustomerComponent,
     CustomersWindowComponent,
-    WindowSellComponent
+    WindowSellComponent,
+    GroupsWindowComponent,
+    NewGroupStep1Component,
+    NewGroupStep2Component,
   ],
   exports: [
     MatAutocompleteModule,

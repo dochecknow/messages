@@ -4,34 +4,42 @@
             <div style='width:100%;'>
 
                 <div class="messages" [style.height]='height'>
-                    <div class="search">
-                        <mat-icon class="search-ico">ic_search</mat-icon>
-                        <mat-form-field class="center">
-                            <input matInput placeholder="Search">
-                        </mat-form-field>
-                        <mat-icon class="search-ico two">ic_create</mat-icon>
-                    </div>
-                    <div class="messages-list scroll">
-                        <button mat-button *ngFor="let item of data" (click)='onClick(item.id)' class="{{item.id===id?'btn-active mat-button ng-star-inserted cdk-focused sdk-mouse-focused':'mat-button ng-star-inserted'}}">
-                            <img src='{{item.ico}}' alt="">
-                            <div class='chat'>
-                                <p class='chat-name'>
-                                    <b>{{item.name}}</b>
-                                </p>
-                                <p class='chat-time'>
-                                    <span>{{item.title}}</span>
-                                    <span>{{item.time}}</span>
-                                </p>
+                    <div class="step">
+                        <div class="step1">
+                            <button mat-raised-button>
+                                <a routerLink="/messages">CANCEL
+                                </a>
+                            </button>
+                            <button mat-raised-button color="primary" (click)="onNextClick()">
+                                NEXT
+                            </button>
+                        </div>
+                        <div class="example-container">
+                            <mat-form-field class="serch-width">
+                                <input matInput placeholder="SEARCH" (keyup)="serchChange($event)">
+                            </mat-form-field>
+                        </div>
+                    
+                        <mat-selection-list>
+                            <div *ngFor="let user of users" class='step1-list-show'>
+                                <mat-list-option value="{{user.id}}">
+                                    <div class='step1-list'>
+                                        <img src="{{user.imagepath}}">
+                                        <div>{{user.name}}</div>
+                                    </div>
+                                </mat-list-option>
                             </div>
-                        </button>
-
+                        </mat-selection-list>
+                    
                     </div>
                 </div>
             </div>
         </mat-grid-tile>
         <mat-grid-tile [colspan]='16' class="message-window-right">
             <div style='width:100%;'>
-                <message [detailData]="obs$"></message>
+                <div class="messages" [style.height]='height'>
+                    <app-new-group-step2 [userlist]="obs$"></app-new-group-step2>
+                </div>
             </div>
         </mat-grid-tile>
     </mat-grid-list>
