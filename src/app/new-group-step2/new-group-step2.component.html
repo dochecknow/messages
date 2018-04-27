@@ -16,7 +16,7 @@
 <div id='chats-list'>
   <mat-list role="list">
     <mat-list-item role="listitem" *ngFor="let user of userlist | async">
-      <button mat-button (click)="openDialog(user)">
+      <button mat-button (click)="openDialog(user.id)">
         <img src="{{user.imagepath}}">
         <div class='user-chat'>
           <span>

@@ -1,5 +1,6 @@
 .step{
     padding: 15px;
+    padding-bottom: 0;
 }
 .step2{
     display:flex;
@@ -33,8 +34,30 @@
     padding:4px 16px !important;
 
 }
-.mat-input-container{
+.user-chat{
+    padding-left:8px;
+}
+.mat-input-container,button.mat-button{
     width:100%
+}
+.mat-list{
+    padding-top:0 
+}
+.mat-list-item{
+
+    margin-bottom: 8px;
+}
+button.mat-button {
+    padding:5px 10px;
+    border-bottom:1px solid rgba(185, 185, 185, 0.87); 
+}
+button.mat-button img,button.mat-button div{
+    float: left;
+}
+button.mat-button img{
+    width: 40px;
+    height: 40px;
+    border-radius:5px;
 }
 #chats-list{
     margin-top:8px;

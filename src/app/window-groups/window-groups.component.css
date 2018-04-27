@@ -117,3 +117,6 @@
     display: block;
     width: 100%;
 }
+.mat-form-field.serch-width{
+    width: 100%;
+}

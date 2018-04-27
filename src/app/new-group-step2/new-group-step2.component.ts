@@ -1,11 +1,10 @@
-import { Component, Inject, OnInit,Input } from '@angular/core';
+import { Component, Inject, OnInit, Input } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { UserService } from '../services/user.service';
-import { GroupService } from '../services/group.service';
-import { User } from '../models/user.model';
+
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
   selector: 'app-new-group-step2',
@@ -14,51 +13,31 @@ import { Observable } from 'rxjs/Observable';
 })
 
 export class NewGroupStep2Component implements OnInit {
-  ngOnInit(){}
-  @Input() userlist = new Observable<any>();
-  // users: User[];
-  // constructor(public dialog: MatDialog, private userService: UserService,
-  //   private groupService: GroupService, private route: ActivatedRoute, private router: Router, ) { }
-  // private selectedUserIDs: string;
-  // groupName = 'My New Group';
-  // selectedID: string;
-  // getUsers(): void {
-  //   this.userService.getUsers().then(u => this.users = u);
-  // }
 
-  // createGroup(): void {
-  //   if (this.groupName === '') { return; }
-  //   const userNames: string[] = [];
-  //   for (const user of this.users) {
-  //     userNames.push(user.username);
-  //   }
-  //   const groupID = this.groupService.addGroup(this.groupName, userNames);
-  //   this.router.navigate(['message/' + groupID]);
-  // }
-  // ngOnInit() {
-  //   this.selectedUserIDs = '';
-  //   this.route.paramMap
-  //     .switchMap((params: ParamMap) => {
-  //       this.selectedUserIDs = params.get('id');
-  //       return this.userService.getUsersByID(this.selectedUserIDs);
-  //     })
-  //     .subscribe(u => this.users = u);
-  // }
-  // onBackClick(): void {
-  //   this.router.navigate(['/newGroupStep1/' + this.selectedUserIDs]);
-  // }
-  // openDialog(user: User): void {
-  //   const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-  //     width: '150px'
-  //   });
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     if (result === 'delete') {
-  //       const index = this.users.indexOf(user);
-  //       this.users.splice(index, 1);
-  //     }
-  //   });
-  // }
+  userArray:any;
+  
+  ngOnInit() {
+    var that=this;
+    this.userlist.subscribe(function (d) {
+      that.userArray = d;
+    })
+  }
+  @Input() userlist = new Subject<any>();
+  constructor(public dialog: MatDialog,
+    private route: ActivatedRoute) { }
+  openDialog(userID: string): void {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      width: '400px'
+    });
+   
+    dialogRef.afterClosed().subscribe(result => {
+  
+      if (result === 'delete') {
+        this.userArray=this.userArray.filter(r => r.id !== userID)
+        this.userlist.next(this.userArray)
+      }
+    });
+  }
 
 }
 

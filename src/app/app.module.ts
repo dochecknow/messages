@@ -59,8 +59,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { CustomersWindowComponent } from './window-customers/window-customers.component';
 import { WindowSellComponent } from './window-sell/window-sell.component';
 import { GroupsWindowComponent } from './window-groups/window-groups.component';
-import { NewGroupStep1Component } from './new-group-step1/new-group-step1.component';
-import { NewGroupStep2Component } from './new-group-step2/new-group-step2.component';
+import { NewGroupStep2Component, DialogOverviewExampleDialog } from './new-group-step2/new-group-step2.component';
 const appRoutes: Routes = [
   { path: 'window/messages', component: MessagesWindowComponent },
   { path: 'window/buy', component: WindowBuyComponent },
@@ -96,8 +95,8 @@ const appRoutes: Routes = [
     CustomersWindowComponent,
     WindowSellComponent,
     GroupsWindowComponent,
-    NewGroupStep1Component,
     NewGroupStep2Component,
+    DialogOverviewExampleDialog,
   ],
   exports: [
     MatAutocompleteModule,
@@ -160,7 +159,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  entryComponents: [MenuComponent],
+  entryComponents: [MenuComponent, DialogOverviewExampleDialog],
   bootstrap: [AppComponent],
   // providers: [GroupService, MessageService, UserService, PersonalProfileService, CompanyProfileService],
 })
